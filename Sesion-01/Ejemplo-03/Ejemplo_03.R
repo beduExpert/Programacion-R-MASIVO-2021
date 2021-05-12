@@ -60,7 +60,7 @@ dim(mydf)
 
 # Podemos agregar una columna extra con datos
 
-mydf$sexo <- <- c("H", "M", "H", "M", "H", "H", "M", "H","H","M", "M")
+mydf$sexo <- c("H", "M", "H", "M", "H", "H", "M", "H","H","M", "M")
 mydf
 
 # Si fuera el caso, se puede eliminar una columna
