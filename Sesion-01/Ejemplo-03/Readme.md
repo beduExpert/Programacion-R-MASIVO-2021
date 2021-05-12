@@ -20,8 +20,7 @@ Seguir el contenido y tratar de comprender el código mostrado a continuación
 ```R
 (milista <- list(nombre = "Pepe", no.hijos = 3, edades.hijos = c(4, 7, 9)))
 ```
-
-#propiedades de la lista
+Propiedades de la lista
 ```R
 str(milista)
 ```
