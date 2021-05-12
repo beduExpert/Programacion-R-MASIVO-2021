@@ -30,12 +30,14 @@ read.csv("bestsellers with categories.csv") # El archivo csv debe estar en el di
 # se puede asignar a un objeto el fichero leido anteriormente
 
 amazon.books <- read.csv("bestsellers with categories.csv")
-tail(amazon.books); str(amazon.books)
+str(amazon.books) 
+head(amazon.books); tail(amazon.books) 
 
 # También se puede leer el fichero directamente desde una URL
 
 data.url <- read.csv("https://www.football-data.co.uk/mmz4281/2021/SP1.csv")
-tail(data.url); str(data.url)
+str(data.url)
+head(data.url); tail(data.url) 
 
 # Calculamos la dimensión de la base de datos
 
