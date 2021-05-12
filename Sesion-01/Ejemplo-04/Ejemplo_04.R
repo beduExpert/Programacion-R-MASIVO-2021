@@ -21,7 +21,7 @@ getwd()
 
 # Fijando el directorio de trabajo
 
-setwd("c:/Users/User/Documents/Bedu/") # Depende del usuario
+setwd("c:/DATA/Sesion1/") # Depende del usuario donde ubicar su wd
 
 # La función read.csv será util para leer fichero .csv
 
