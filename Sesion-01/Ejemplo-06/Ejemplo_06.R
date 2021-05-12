@@ -64,12 +64,16 @@ while(count < 10) {
 
 # Ejemplo
 
-x <- runif(1, 0, 10) ## creamos un número aleatorio entre 0 y 10
+(x <- runif(1, 0, 10)) ## creamos un número aleatorio entre 0 y 10
+
 if(x > 5) {
   y <- TRUE
-} else {
+  print(paste(y, ", x=", round(x,2) ,"> 5"))
+  } else {
   y <- FALSE
-}
-x; y
+  print(paste(y, ", x=", round(x,2) ," < 5"))
+  }
+
+
 
 # De este modo estamos asignando un valor a una variable en función del valor de otra. Lo que se debe tener en cuenta es que la condición debe retornar un valor TRUE o FALSE.
