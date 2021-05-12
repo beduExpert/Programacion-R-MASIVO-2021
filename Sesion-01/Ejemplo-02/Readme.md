@@ -68,14 +68,14 @@ Construyendo la matriz utilizando la función `rbind`, para unirlos por fila
 ```R
 rbind(a,b)
 ```
-Aplicando una función a las filas o columnas de una matriz (`mean`, `sort`) 
+Aplicando una función (`mean`), a las filas o columnas de una matriz utilizando _apply_  
 ```R
-apply(n, 2, mean)
+apply(n, 1, mean)  # el índice 1 hace referencia a las filas
 
-apply(n, 2, sort)
+apply(n, 2, mean)  # el índice 2 hace referencia a las columnas
 ```
 
-Algunas operaciones básicas de matrices 
+Algunas operaciones básicas de matrices que puede intentar son: 
    - 1. Producto matricial: A %*% B
    - 2. Producto elemento a elemento: A*B
    - 3. Traspuesta: t(A)  
