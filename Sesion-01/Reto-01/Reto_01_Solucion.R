@@ -2,7 +2,7 @@
 
 # leyendo el fichero desde el repositorio
 
-netflix <-read.csv("https://raw.githubusercontent.com/ecoronadoj/Sesion_1/main/Data/netflix_titles.csv")
+netflix <-read.csv("https://raw.githubusercontent.com/beduExpert/Programacion-R-Santander-2021/main/Sesion-01/Data/netflix_titles.csv")
 
 # dimensión del data frame
 dim(netflix)
