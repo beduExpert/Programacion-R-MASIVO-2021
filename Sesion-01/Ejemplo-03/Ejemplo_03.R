@@ -62,6 +62,7 @@ dim(mydf)
 
 mydf$sexo <- c("H", "M", "H", "M", "H", "H", "M", "H","H","M", "M")
 mydf
+summary(mydf)
 
 # Si fuera el caso, se puede eliminar una columna
 
