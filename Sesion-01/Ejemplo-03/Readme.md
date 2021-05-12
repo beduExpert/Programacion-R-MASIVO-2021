@@ -31,45 +31,46 @@ milista$nombre
 
 Creando data frames
 ```R
-x <- 6:8
-y <- c("A", "B", "C")
-(mifile <- data.frame(edad = x, grupo = y))
+(x <- 10:21)
+(y <- letters[x])
 
-str(mifile)
+(mydf <- data.frame(edad=x, grupo=y))
+
+str(mydf)
 ```
 
 Extrayendo información del df, se hace igual que con las matrices
 ```R
-mifile[1]
-mifile[,1]
-mifile$edad
+mydf[1]
+mydf[,1]
+mydf$edad
 ```
 Calculando algunos estadísticos básicos
 ```R
-mean(mifile$edad)
+mean(mydf$edad)
 ```
 
 Podemos hacer uso de la función `paste` para agregar un mensaje
 ```R
-paste("La media de la edad es:", mean(mifile$edad))
+paste("La media de la edad es:", mean(mydf$edad))
 ```
 
 Podemos inspeccionar a detalle el df utilizando `summary`
 ```R
-summary(mifile)
+summary(mydf)
 ```
 También se puede conocer su dimensión 
 ```R
-dim(mifile)
+dim(mydf)
 ```
 Podemos agregar una columna extra con datos 
 ```RR
-mifile$sexo <- c("H", "M", "H")
-mifile
+mydf$sexo <-c("H", "M", "H", "M", "H", "H", "M", "H","H","M", "M")
+mydf
 ```
 
 Si fuera el caso, se puede eliminar una columna 
 ```R
-mifile$sexo <- NULL
-mifile
+mydf$sexo <- NULL
+mydf
 ```
