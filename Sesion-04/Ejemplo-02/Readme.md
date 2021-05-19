@@ -30,6 +30,8 @@ text(x = 1, y = 1, labels = expression("E(X) = " ~ 1/lambda == 1/2), col = 2)
 text(x = 3, y = 0.5, labels = expression("DE(X) = " ~ 1/lambda == 1/2), col = 4)
 ```
 
+![Exp](https://user-images.githubusercontent.com/50311949/118197269-349d4600-b414-11eb-8e26-5a7fa66a3789.png)
+
 Ahora obtenemos una muestra aleatoria de tamaño n = 4 de la distribución exponencial considerada 
 
 ```R
@@ -68,7 +70,7 @@ mdf <- as.data.frame(media1000.7)
 tail(mdf)
 ```
 
-Observamos que el histograma de las medias tiene forma de campana
+Observamos que el histograma de las medias tiene aproximádamente forma de campana
 
 ```R
 ggplot(mdf, aes(media1000.7)) + 
@@ -81,6 +83,8 @@ ggplot(mdf, aes(media1000.7)) +
   theme_bw() +
   theme(plot.title = element_text(hjust = 0.5, size = 16)) 
 ```
+
+![hist7](https://user-images.githubusercontent.com/50311949/118197383-73cb9700-b414-11eb-973d-9ad5d60ae5ae.png)
 
 ```R
 mean(media1000.7); 1/2 # Media de las 1000 medias y media de la población de la cual vienen las 1000 muestras
@@ -111,36 +115,9 @@ ggplot(mdf, aes(media1000.33)) +
   theme(plot.title = element_text(hjust = 0.5, size = 16)) 
 ```
 
+![hist33](https://user-images.githubusercontent.com/50311949/118197481-a83f5300-b414-11eb-855b-fa0475a0013d.png)
+
 ```R
 mean(media1000.33); 1/2 # Media de las 1000 medias y media de la población de la cual vienen las 1000 muestras
 sd(media1000.33); (1/2)/sqrt(33) # DE de las 1000 medias y DE de la población de la cual vienen las 1000 muestras dividida por la raíz del tamaño de la muestra
-```
-
-Ahora obtenemos 1000 muestras de tamaño 400 y las 1000 medias correspondientes a las muestras
-
-```R
-set.seed(543465) # Para reproducir las muestras en el futuro
-m1000.400 <- sapply(X = rep(400, 1000), FUN = rexp, 2)
-media1000.400 <- apply(m1000.400, 2, mean)
-mdf <- as.data.frame(media1000.400)
-tail(mdf)
-```
-
-Observamos que el histograma de las medias es más parecida todavía a una campana
-
-```R
-ggplot(mdf, aes(media1000.400)) + 
-  geom_histogram(colour = 'orange', 
-                 fill = 'gray',
-                 alpha = 0.7) + # Intensidad del color fill
-  geom_vline(xintercept = mean(media1000.400), linetype="dashed", color = "black") + 
-  ggtitle('Histograma para las 1000 medias') + 
-  labs(x = 'medias', y = 'Frecuencia')+
-  theme_gray() +
-  theme(plot.title = element_text(hjust = 0.5, size = 16)) 
-```
-
-```R
-mean(media1000.400); 1/2 # Media de las 1000 medias y media de la población de la cual vienen las 1000 muestras
-sd(media1000.400); (1/2)/sqrt(400) # DE de las 1000 medias y DE de la población de la cual vienen las 1000 muestras dividida por la raíz del tamaño de la muestra
 ```
