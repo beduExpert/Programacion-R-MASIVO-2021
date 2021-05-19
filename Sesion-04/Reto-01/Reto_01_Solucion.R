@@ -1,67 +1,22 @@
-# Reto 1. Distribuciones binomial, normal y t de Student
+# Reto 1. Distribución normal
 
-#### Distribución binomial
+# Una compañía que manufactura y embotella jugo de manzana usa una máquina que 
+# automáticamente llena botellas de 16 onzas. Hay alguna variación, no obstante, 
+# en las cantidades de líquido que se ponen en las botellas que se llenan. 
+# Se ha observado que la cantidad de líquido está normalmente distribuida en 
+# forma aproximada con media de 16 onzas y desviación estándar de 1 onza.
 
-# Consideremos un experimento binomial con n = 35 pruebas idénticas e independientes, en donde la probabilidad de éxito en cada prueba es p = 0.51. Encuentre lo siguiente: 
-  
-# 1. La probabilidad de observar exactamente 10 éxitos
-# 2. La probabilidad de observar 10 o más exitos
-# 3. El cuantil de orden 0.5
-# 4. Genere una muestra aleatoria de tamaño 1000 de esta distribución, construya una tabla de frecuencias relativas con los resultados y realice el gráfico de barras de los resultados que muestre las frecuencias relativas.
-
-# **Solución**
-  
-dbinom(x = 10, size = 35, prob = 0.51) # 1.
-pbinom(q = 9, size = 35, prob = 0.51, 
-       lower.tail = FALSE) # 2. 
-qbinom(p = 0.5, size = 35, prob = 0.51) # 3.
-
-set.seed(4857) # 4.
-ma <- rbinom(n = 1000, size = 35, prob = 0.51)
-madf <- as.data.frame(table(ma)/length(ma))
-tail(madf)
-library(ggplot2)
-p <- ggplot(madf, aes(x = ma, y = Freq)) + 
-  geom_bar (stat="identity")
-p
-
-  
-#### Distribución normal
-  
-# Considere una variable aleatoria normal con media 110 y desviación estándar 7. Realice lo siguiente:
-  
-# 1. Grafique la función de densidad de probabilidad
-# 2. Encuentre la probabilidad de que la v.a. sea mayor o igual a 140
-# 3. Encuentre el cuantil de orden 0.95
-# 4. Genere una muestra aleatoria de tamaño 1000 y realice el histograma de frecuencias relativas para esta muestra
+# Determine la proporción de botellas que tendrán más de 18 onzas.
 
 # **Solución**
   
-library(ggplot2)
-x <- seq(80, 140, 0.1) # 1.
-y <- dnorm(x = x, mean = 110, sd = 7)
-data <- data.frame(x, y)
-tail(data)
-p <- ggplot(data, aes(x, y)) + geom_line()
-p
-pnorm(140, mean = 110, sd = 7, lower.tail = FALSE) # 2. 
-qnorm(0.95, mean = 110, sd = 7) # 3.
+pnorm(q = 18, mean = 16, sd = 1, lower.tail = FALSE)
 
-set.seed(19) # 4.
-ma <- rnorm(1000, mean = 110, sd = 7) 
-madf <- as.data.frame(ma)
-tail(madf)
+# Observemos la región que corresponde a esta probabilidad en la siguiente gráfica en color azul
 
-p <- ggplot(madf, aes(ma)) + 
-  geom_histogram(colour = 'red', 
-                 fill = 'blue',
-                 alpha = 0.8, # Intensidad del color fill
-                 binwidth = 3.5) + 
-  geom_density(aes(y = 3.5*..count..))+
-  geom_vline(xintercept = mean(ma), 
-             linetype="dashed", color = "black") + 
-  ggtitle('Histograma para la muestra normal') + 
-  labs(x = 'Valores obtenidos', y = 'Frecuencia')+
-  theme_dark() +
-  theme(plot.title = element_text(hjust = 0.5, size = 16))
-p
+x <- seq(-4, 4, 0.01) + 16 # Algunos posibles valores que puede tomar la v.a. X (mínimo: mu-4sigma, máximo: mu+4sigma)
+y <- dnorm(x, mean = 16, sd = 1) # Valores correspondientes de la función de densidad de probabilidad
+
+plot(x, y, type = "l", xlab="", ylab="")
+title(main = "Densidad de Probabilidad Normal", sub = expression(paste(mu == 16, " y ", sigma == 1)))
+polygon(c(18, x[x>=18], max(x)), c(0, y[x>=18], 0), col="blue")
