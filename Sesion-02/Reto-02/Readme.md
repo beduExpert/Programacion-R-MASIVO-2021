@@ -18,4 +18,6 @@
 
 para observar las características del objeto y tener una mayor comprensión de este.
 
-2. Crea una función que calcule la mediana de un conjuntos de valores, sin utilizar la función `median`
+2. Crea una función que calcule la mediana para datos no agrupados de un conjuntos de valores, sin utilizar la función `median`
+
+_ref (https://es.wikipedia.org/wiki/Mediana_(estad%C3%ADstica))_
