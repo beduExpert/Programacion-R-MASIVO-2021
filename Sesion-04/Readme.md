@@ -16,12 +16,11 @@ En esta sesión estudiaremos temas relacionados con los siguientes puntos
 
 ## 📂 Organización de la clase
 
-- [Ejemplo 1](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-04/Ejemplo-01) Distribuciones binomial, normal y t de Student
-   - [Reto 1](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-04/Reto-01) Distribuciones binomial, normal y t de Student
-- [Ejemplo 2](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-04/Ejemplo-02) Teorema central del límite
-   - [Reto 2](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-04/Reto-02) Algunos estimadores puntuales insesgados comunes
-- [Ejemplo 3](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-04/Ejemplo-03) Algunos estimadores puntuales insesgados comunes
-   - [Ejemplo 4](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-04/Ejemplo-04) Contraste de hipótesis
-   - [Reto 3](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-04/Reto-03) Contraste de hipótesis
-- [Postwork](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-04/Postwork)
+- [Ejemplo 1](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-04/Ejemplo-01) Distribuciones binomial, normal y t de Student
+   - [Reto 1](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-04/Reto-01) Distribuciones binomial, normal y t de Student
+- [Ejemplo 2](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-04/Ejemplo-02) Teorema central del límite
+   - [Reto 2](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-04/Reto-02) Teorema central del límite
+- [Ejemplo 3](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-04/Ejemplo-03) Contraste de hipótesis
+   - [Reto 3](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-04/Reto-03) Contraste de hipótesis
+- [Postwork](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-04/Postwork)
 
