@@ -32,4 +32,12 @@ Algo útil es revisar la versión que se tiene de `R`, ya que en ocasiones no se
 version
 ```
 
+En caso de que tu versión de R no sea la más reciente puedes intentar desde el RGui.exe lo siguiente para actualizarlo a la última versión (recuerda que no se hace desde RSTudio)
+
+```R
+install.packages("installr", dependencies = TRUE)
+library(installr)
+updateR()
+```
+
 También se puede realizar esta acción en la pestaña de Packages, intentalo.
