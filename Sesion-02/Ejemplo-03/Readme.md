@@ -13,7 +13,7 @@
 El paquete `dplyr` cuenta con varias funciones muy útiles para manipular y transformar data frames. Una vez instalado el paquete `dplyr`, puede cargarlo en `R` de la siguiente manera (sin mensajes ni advertencias)
 
 ```R
-suppressMessages(suppressWarnings(library(dplyr)))
+library(dplyr)
 ```
 
 Vamos a descargar archivos csv que contienen datos del covid-19 para mostrar como funcionan algunas funciones del paquete `dplyr`. Las url desde las cuales descargamos los datos son las siguientes
@@ -34,21 +34,21 @@ Una vez que hemos descargado los datos, importamos a `R` los datos de casos conf
 
 ```R
 conf <- read.csv("st19ncov-confirmados.csv")
-mu <- read.csv("st19ncov-muertes.csv")
+dec <- read.csv("st19ncov-muertes.csv")
 ```
 
 Utilizamos las funciones `str` y `head` para ver algunas características
 
 ```R
-str(conf); str(mu)
-head(conf); head(mu)
+str(conf); str(dec)
+head(conf); head(dec)
 ```
 
 Ahora seleccionamos todas las filas excepto la primera, esto para cada data frame
 
 ```R
 Sconf <- conf[-1, ]
-Smu <- mu[-1, ]
+Sdec <- dec[-1, ]
 ```
 
 Con la función `select` del paquete `dplyr`, del data frame de casos confirmados seleccionamos únicamente las columnas de país, fecha y número acumulado de casos
@@ -60,7 +60,7 @@ Sconf <- select(Sconf, Country.Region, Date, Value) # País, fecha y acumulado d
 Con la función `rename`, renombramos las columnas correspondientes al país y al número acumulado de infectados por covid-19
 
 ```R
-Sconf <- rename(Sconf, Pais = Country.Region, Fecha = Date, Infectados = Value)
+Sconf <- rename(Sconf, Country = Country.Region, Fecha = Date, Infectados = Value)
 ```
 
 ```R
@@ -76,17 +76,18 @@ Sconf <- mutate(Sconf, Fecha = as.Date(Fecha, "%Y-%m-%d"), Infectados = as.numer
 Hacemos algo similar con el data frame correspondiente al número acumulado de muertos
 
 ```R
-Smu <- select(Smu, Country.Region, Date, Value) # Seleccionamos país, fecha y acumulado de muertos
-Smu <- rename(Smu, Pais = Country.Region, Fecha = Date, Muertos = Value) # Renombramos
-Smu <- mutate(Smu, Fecha = as.Date(Fecha, "%Y-%m-%d"), Muertos = as.numeric(Muertos)) 
+Sdec <- select(Sdec, Country.Region, Date, Value) # Seleccionamos país, fecha y acumulado de muertos
+Sdec <- rename(Sdec, Country = Country.Region, Fecha = Date, Decesos = Value) # Renombramos
+Sdec <- mutate(Sdec, Fecha = as.Date(Fecha, "%Y-%m-%d"), Decesos = as.numeric(Decesos)) 
+dim(Scm)
 ```
 
 ```R
-Scm <- merge(Sconf, Smu) # Unimos infectados y muertos acumulados para cada fecha
+Scm <- merge(Sconf, Sdec) # Unimos infectados y muertos acumulados para cada fecha
 ```
 
 ```R
-mex <- filter(Scm, Pais == "Mexico") # Seleccionamos sólo a México
+mex <- filter(Scm, Country == "Mexico") # Seleccionamos sólo a México
 mex <- filter(mex, Infectados != 0) # Primer día de infectados
 ```
 
@@ -94,12 +95,12 @@ Para México, creamos otras variables o columnas de interés con ayuda de la fun
 
 ```R
 mex <- mutate(mex, NI = c(1, diff(Infectados))) # Nuevos infectados por día
-mex <- mutate(mex, NM = c(0, diff(Muertos))) # Nuevos muertos por día
+mex <- mutate(mex, ND = c(0, diff(Decesos))) # Nuevos muertos por día
 
-mex <- mutate(mex, Letalidad = round(Muertos/Infectados*100, 1)) # Tasa de letalidad
+mex <- mutate(mex, Letalidad = round(Decesos/Infectados*100, 1)) # Tasa de letalidad
 
-mex <- mutate(mex, IDA = lag(Infectados), MDA = lag(Muertos)) # Valores día anterior
-mex <- mutate(mex, FCI = Infectados/IDA, FCM = Muertos/MDA) # Factores de Crecimiento
+mex <- mutate(mex, IDA = lag(Infectados), DDA = lag(Decesos)) # Valores día anterior
+mex <- mutate(mex, FCI = Infectados/IDA, FCD = Decesos/DDA) # Factores de Crecimiento
 mex <- mutate(mex, Dia = 1:dim(mex)[1]) # Días de contingencia
 ```
 
