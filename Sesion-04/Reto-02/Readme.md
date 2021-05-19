@@ -1,20 +1,15 @@
-# RETO 2. Algunos estimadores puntuales insesgados comunes
+# RETO 2. Teorema central del límite
 
 #### Objetivo
 
-- Entender la idea de estimador puntual insesgado 
+- Calcular probabilidades usando el teorema central del límite.
 
 #### Requisitos
 
-- Haber estudiado el Prework y el Work
+- Haber trabajado con el Prework y el Work
 
 #### Desarrollo
 
-#### *Nota: este reto es opcional*
+Las calificaciones de exámenes para todos los estudiantes de último año de preparatoria en cierto estado tienen media de 60 y varianza de 64. Una muestra aleatoria de `n = 100` estudiantes de una escuela preparatoria grande tuvo una calificación media de 58. ¿Hay evidencia para sugerir que el nivel de conocimientos de esta escuela sea inferior? (Calcule la probabilidad de que la media de una muestra aleatoria sea a lo sumo 58 cuando `n = 100`.)
 
-1. Genere 1500 muestras de tamaño 67 de la distribución exponencial con parámetro 5
-2. Obtenga las 1500 medias correspondientes a cada una de las muestras
-3. Realice el histograma de frecuencias de las 1500 medias
-4. Encuentre la media muestral y desviación estándar muestral de las 1500 medias 
-5. Compare la media muestral encontrada en el paso anterior con la media real (1/5) de la población de la cual provienen las muestras 
-6. Compare la desviación estándar muestral encontrada con la desviación estándar real (1/5) de la población de la cual provienen las muestras pero dividida por 67 (el tamaño de las muestras)
+Basado en Wackerly, D. et al. (2010). Estadística Matemática con Aplicaciones. Cengage Learning Editores, S.A. de C.V.
