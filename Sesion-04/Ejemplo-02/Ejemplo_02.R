@@ -35,7 +35,7 @@ m1000.7 <- sapply(X = rep(7, 1000), FUN = rexp, 2)
 media1000.7 <- apply(m1000.7, 2, mean)
 mdf <- as.data.frame(media1000.7)
 tail(mdf)
-# Observamos que el histograma de las medias tiene forma de campana
+# Observamos que el histograma de las medias tiene aproximádamente forma de campana
 
 ggplot(mdf, aes(media1000.7)) + 
   geom_histogram(colour = 'green', 
@@ -70,23 +70,3 @@ ggplot(mdf, aes(media1000.33)) +
 mean(media1000.33); 1/2 # Media de las 1000 medias y media de la población de la cual vienen las 1000 muestras
 sd(media1000.33); (1/2)/sqrt(33) # DE de las 1000 medias y DE de la población de la cual vienen las 1000 muestras dividida por la raíz del tamaño de la muestra
 
-# Ahora obtenemos 1000 muestras de tamaño 400 y las 1000 medias correspondientes a las muestras
-
-set.seed(543465) # Para reproducir las muestras en el futuro
-m1000.400 <- sapply(X = rep(400, 1000), FUN = rexp, 2)
-media1000.400 <- apply(m1000.400, 2, mean)
-mdf <- as.data.frame(media1000.400)
-tail(mdf)
-# Observamos que el histograma de las medias es más parecida todavía a una campana
-
-ggplot(mdf, aes(media1000.400)) + 
-  geom_histogram(colour = 'orange', 
-                 fill = 'gray',
-                 alpha = 0.7) + # Intensidad del color fill
-  geom_vline(xintercept = mean(media1000.400), linetype="dashed", color = "black") + 
-  ggtitle('Histograma para las 1000 medias') + 
-  labs(x = 'medias', y = 'Frecuencia')+
-  theme_gray() +
-  theme(plot.title = element_text(hjust = 0.5, size = 16)) 
-mean(media1000.400); 1/2 # Media de las 1000 medias y media de la población de la cual vienen las 1000 muestras
-sd(media1000.400); (1/2)/sqrt(400) # DE de las 1000 medias y DE de la población de la cual vienen las 1000 muestras dividida por la raíz del tamaño de la muestra
