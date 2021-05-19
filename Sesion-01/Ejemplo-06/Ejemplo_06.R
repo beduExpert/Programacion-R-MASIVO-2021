@@ -18,11 +18,11 @@ print("Este loop calcula el cuadrado de los 10 primeros elementos del vector w")
 
 # inicializando la varialbe wsq
 
-wsq <- 0
+w.sq <- 0
 
 for(i in 1:10) {
-  wsq[i] <- w[i]**2
-  print(wsq[i])
+  w.sq[i] <- w[i]**2
+  print(w.sq[i])
 }
 
 # Los bucles WHILE comienzan comprobando una condición. Si esta es verdadera, entonces se entra al cuerpo del bucle. Una vez completada una ejecución de este bloque, se comprueba la condición nuevamente y así sucesivamente hasta que la comprobación de la condición de falso.
