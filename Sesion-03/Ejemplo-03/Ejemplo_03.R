@@ -1,3 +1,4 @@
+# Ejemplo 3.   Sesión 3.
 # Desarrollo
 
 # Realizamos un scatter plot de las variables wt y mpg, debemos utilizar necesariamente geom_point()
@@ -17,7 +18,7 @@
 
 my_scatplot + xlab('Weight (x 1000lbs)') + ylab('Miles per Gallon')
 
-# Otras características interesantes
+# Otras características útil es cambiar el nombre a la leyenda
 
 (my_scatplot <- ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) + geom_point())
 my_scatplot + labs(x='Weight (x1000lbs)',y='Miles per Gallon',colour='Number of\n Cylinders')
