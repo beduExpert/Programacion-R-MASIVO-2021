@@ -73,17 +73,17 @@ Como cada una de las columnas del último data frame aparecen como factor, con l
 Sconf <- mutate(Sconf, Fecha = as.Date(Fecha, "%Y-%m-%d"), Infectados = as.numeric(Infectados)) 
 ```
 
-Hacemos algo similar con el data frame correspondiente al número acumulado de muertos
+Hacemos algo similar con el data frame correspondiente al número acumulado de decesos
 
 ```R
-Sdec <- select(Sdec, Country.Region, Date, Value) # Seleccionamos país, fecha y acumulado de muertos
+Sdec <- select(Sdec, Country.Region, Date, Value) # Seleccionamos país, fecha y acumulado de decesos
 Sdec <- rename(Sdec, Country = Country.Region, Fecha = Date, Decesos = Value) # Renombramos
 Sdec <- mutate(Sdec, Fecha = as.Date(Fecha, "%Y-%m-%d"), Decesos = as.numeric(Decesos)) 
 dim(Scm)
 ```
 
 ```R
-Scm <- merge(Sconf, Sdec) # Unimos infectados y muertos acumulados para cada fecha
+Scm <- merge(Sconf, Sdec) # Unimos infectados y decesos acumulados para cada fecha
 ```
 
 ```R
@@ -95,7 +95,7 @@ Para México, creamos otras variables o columnas de interés con ayuda de la fun
 
 ```R
 mex <- mutate(mex, NI = c(1, diff(Infectados))) # Nuevos infectados por día
-mex <- mutate(mex, ND = c(0, diff(Decesos))) # Nuevos muertos por día
+mex <- mutate(mex, ND = c(0, diff(Decesos))) # Nuevos decesos por día
 
 mex <- mutate(mex, Letalidad = round(Decesos/Infectados*100, 1)) # Tasa de letalidad
 
