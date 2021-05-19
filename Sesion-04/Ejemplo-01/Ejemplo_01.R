@@ -1,81 +1,6 @@
-# Distribuciones binomial, normal y t de Student
+# Distribuciones normal y t de Student
 
 library(ggplot2)
-library(reshape2)
-
-# Distribución binomial
-
-# En `R` para calcular valores de las funciones de probabilidad, distribución 
-# o cuantiles de la distribución binomial (discreta), usamos las funciones dbinom,
-# pbinom y  qbinom respectivamente. Para generar muestras aleatorias de esta
-# distribución utilizamos la función rbinom.
-
-# Consideremos un experimento binomial con n = 30 pruebas 
-# idénticas e independientes, en donde la probabilidad de éxito en cada prueba
-# es p = 0.2 (parámetros n = 30 y p = 0.2)
-
-#### Función de probabilidad
-
-# Para obtener P(X = 20), es decir, la probabilidad de observar
-# 20 éxitos exactamente, en `R` ejecutamos
-
-dbinom(x = 20, size = 30, prob = 0.2)
-
-#### Función de distribución
-
-# Para obtener P(X <= 20), es decir, la probabilidad de observar
-# a lo más 20 éxitos, en `R` corremos
-
-pbinom(q = 20, size = 30, prob = 0.2)
-
-# Para encontrar el valor más pequeño b tal que P(X <= b) >= 0.35,
-# es decir, el cuantil de orden 0.35, usamos
-
-#### Cuantiles
-
-qbinom(p = 0.35, size = 30, prob = 0.2) # b = 5
-
-pbinom(q = 4, size = 30, prob = 0.2) # P(X <= 4) = 0.2552 < 0.35
-pbinom(q = 5, size = 30, prob = 0.2) # P(X <= 5) = 0.4275 >= 0.35
-pbinom(q = 6, size = 30, prob = 0.2) # P(X <= 6) = 0.6070 >= 0.35
-
-#### Muestras aleatorias
-
-# Para obtener una muestra aleatoria de tamaño n = 1000, de la
-# distribución binomial con parámetros como especificamos,
-# hacemos
-
-set.seed(4857) # Establecemos una semilla, para poder reproducir la muestra en el futuro
-muestra <- rbinom(n = 1000, size = 30, prob = 0.2)
-length(muestra); muestra[1:3]
-
-# Podemos observar las frecuencias absolutas de los distintos valores
-# obtenidos
-
-as.data.frame(table(muestra))
-
-# También podemos observar las frecuencias relativas
-
-(df1 <- as.data.frame(table(muestra)/length(muestra)))
-
-valg <- as.character(df1$muestra) # distintos valores generados por rbinom
-(valg <- as.numeric(valg)) # Convertimos a números
-
-# Las frecuencias relativas son muy parecidas a las siguientes probabilidades
-
-(v1 <- round(sapply(valg, dbinom, size = 30, p = 0.2), 3))
-
-# Combinamos df1 y v1 en un único data frame
-
-(df2 <- cbind(df1, v1))
-(names(df2) <- c("Exitos", "FR", "Prob"))
-
-(df2 <- melt(df2)) # función del paquete reshape2
-
-# Las frecuencias relativas son muy parecidas a las probabilidades.
-
-ggplot(df2, aes(x = Exitos, y = value, fill = variable)) + 
-  geom_bar (stat="identity", position = "dodge") # Funciones del paquete ggplot2
 
 # Distribución normal
 
@@ -192,33 +117,6 @@ ggplot(mdf, aes(muestra)) +
   theme_dark() +
   theme(plot.title = element_text(hjust = 0.5, size = 16))  
 
-#### Regla empírica
-
-mean <- 175; sd <- 6
-x <- seq(mean-4*sd, mean+4*sd, 0.01)
-y <- dnorm(x, mean, sd)
-plot(x, y, type = "l", xlab="valores", ylab = "", xaxt = "n", yaxt = "n")
-title(main = "Densidad de Probabilidad Normal", sub = expression(paste("Regla Empírica con ", mu == 175, " y ", sigma == 6)))
-abline(v=mean, lty = 2, lwd = 2)
-for(k in c(-3, -2, -1, 1, 2, 3)) abline(v = mean+k*sd, lty = 2, col = abs(k))
-ps <- c(mean - 3*sd, mean - 2*sd, mean - sd, mean, mean + sd, mean + 2*sd, mean + 3*sd)
-axis(side = 1, at = ps)
-x0 <- NULL
-for(i in 1:length(ps)-1) x0 <- c(x0, (ps[i]+ps[i+1])/2)
-y0 <- dnorm(x0, mean, sd)*1/3
-text(x = x0, y = y0, labels = c("2.35%", "13.5%", "34%", "34%", "13.5%", "2.35%"))
-x1 <- (x[1]+ps[1])/2; y1 <- dnorm(mean, mean, sd)*1/2
-xf <- (x[length(x)]+ps[length(ps)])/2; yf <- dnorm(mean, mean, sd)*1/2
-text(x = c(x1, xf), y = c(y1, yf), labels = c("0.15%", "0.15%"))
-segments(x0 = x1, y0 = 0, x1 = x1, y1 = y1,               # Draw one line as in Example 1
-         col = "cornflowerblue",                               # Color of line
-         lwd = 5,                                              # Thickness of line
-         lty = "dotted")     
-segments(x0 = xf, y0 = 0, x1 = xf, y1 = yf,               
-         col = "cornflowerblue",                               
-         lwd = 5,                                              
-         lty = "dotted")     
-
 # Distribución t de Student
 
 # En `R` para calcular valores de las funciones de densidad, distribución 
@@ -242,7 +140,7 @@ abline(v = 0, lwd=2, lty=2)
 
 pt(q = 1.5, df = 7)
 
-# Observemos la región que corresponde a esta probabilidad en la siguiente gráfica
+# Observemos el área que corresponde a esta probabilidad en la siguiente gráfica
 
 plot(x, y, type = "l", main = "Densidad t de Student, gl = 7", xlab="", ylab="")
 polygon(c(min(x), x[x<=1.5], 1.5), c(0, y[x<=1.5], 0), col="purple")
@@ -251,7 +149,7 @@ polygon(c(min(x), x[x<=1.5], 1.5), c(0, y[x<=1.5], 0), col="purple")
 
 pt(q = 2, df = 7, lower.tail = FALSE)
 
-# Observemos la región que corresponde a esta probabilidad en la siguiente gráfica
+# Observemos el área que corresponde a esta probabilidad en la siguiente gráfica
 
 plot(x, y, type = "l", main = "Densidad t de Student, gl = 7", xlab="", ylab="")
 
