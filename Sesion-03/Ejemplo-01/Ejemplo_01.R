@@ -17,7 +17,6 @@ ggplot(mtcars, aes(x=cyl, y = hp, colour = mpg )) +
 
 # Agregando carácteristicas de tema y facewrap
 
-names(mtcars)
 ggplot(mtcars, aes(x=cyl, y = hp, colour = mpg )) + 
   geom_point() +   
   theme_gray() +   # Temas (inteta cambiarlo)
@@ -25,7 +24,6 @@ ggplot(mtcars, aes(x=cyl, y = hp, colour = mpg )) +
 
 # Agregando nombres a los ejes x, y
 
-names(mtcars)
 ggplot(mtcars, aes(x = cyl, y = hp, colour = mpg )) + 
   geom_point() +   
   theme_gray() +   # Temas (inteta cambiarlo)
