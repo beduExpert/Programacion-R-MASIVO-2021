@@ -15,22 +15,15 @@ Conocer mejor el conjunto de datos con el que se esté trabajando,
 
 ## 📂 Organización de la clase
 
-- [Ejemplo 1](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-03/Ejemplo-01) Paquete ggplot2
-- [Ejemplo 2](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-03/Ejemplo-02) Histogramas
-   - [Reto 1](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-03/Reto-01) Altura de los alumnos
-- [Ejemplo 3](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-03/Ejemplo-03) Gráficos de dispersión
-   - [Reto 2](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-03/Reto-02) Estadísticos de la NBA
-- [Ejemplo 4](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-03/Ejemplo-04) Boxplots y outliers
-- [Ejemplo 5](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-03/Ejemplo-05) Gráficos de líneas o barras
+- [Ejemplo 1](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-03/Ejemplo-01) Paquete ggplot2
+- [Ejemplo 2](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-03/Ejemplo-02) Histogramas
+   - [Reto 1](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-03/Reto-01) Altura de los alumnos
+- [Ejemplo 3](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-03/Ejemplo-03) Gráficos de dispersión
+   - [Reto 2](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-03/Reto-02) Estadísticos de la NBA
+- [Ejemplo 4](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-03/Ejemplo-04) Boxplots y outliers
+- [Ejemplo 5](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-03/Ejemplo-05) Gráficos de líneas o barras
 
-
-## Opcionales 
-
-En la sesión 6 se revisará el tema de series de tiempo)
-
-- [Ejemplo 6](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-03/Ejemplo-06) Series de tiempo y descomposición
-   - [Reto 3](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-03/Reto-03) Series de tiempo y descomposición
-- [Postwork](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-03/Postwork)
+- [Postwork](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-03/Postwork)
 
 
 
