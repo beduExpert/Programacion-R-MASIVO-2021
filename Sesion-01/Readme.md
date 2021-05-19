@@ -9,7 +9,6 @@ Conocer las nociones básicas para poder manipular data sets, poder realizar lec
 Durante el transcurso de esta sesión serás capaz de desarrollar las siguientes capacidades de R 
 
 - Tipos de datos y objetos (vectores, df, matrices), en R
-- cbind, rbind, apply
 - Descarga y lectura de data sets.
 - install.packages, library
 - Loops
