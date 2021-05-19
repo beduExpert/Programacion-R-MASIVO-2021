@@ -1,37 +1,26 @@
-# Reto 2. Algunos estimadores puntuales insesgados comunes
+# Reto 2. Teorema central del límite
 
-# Nota: este reto es opcional
-
-# 1. Genere 1500 muestras de tamaño 67 de la distribución exponencial con parámetro 5
-# 2. Obtenga las 1500 medias correspondientes a cada una de las muestras
-# 3. Realice el histograma de frecuencias de las 1500 medias
-# 4. Encuentre la media muestral y desviación estándar muestral de las 1500 medias 
-# 5. Compare la media muestral encontrada en el paso anterior con la media real (1/5) de la población de la cual provienen las muestras 
-# 6. Compare la desviación estándar muestral encontrada con la desviación estándar real (1/5) de la población de la cual provienen las muestras pero dividida por 67 (el tamaño de las muestras)
+# Las calificaciones de exámenes para todos los estudiantes de último año de 
+# preparatoria en cierto estado tienen media de 60 y varianza de 64. 
+# Una muestra aleatoria de n = 100 estudiantes de una escuela preparatoria 
+# grande tuvo una calificación media de 58. ¿Hay evidencia para sugerir que el 
+# nivel de conocimientos de esta escuela sea inferior? 
+# (Calcule la probabilidad de que la media de una muestra aleatoria sea a lo 
+# sumo 58 cuando n = 100.)
 
 # **Solución**
   
-library(ggplot2)
-set.seed(65) # 1.
-m1500.67 <- sapply(X = rep(67, 1500), FUN = rexp, rate = 5)
-media1500.67 <- apply(m1500.67, 2, mean) # 2.
-mdf <- as.data.frame(media1500.67)
-tail(mdf)
+# Denote con Y_barra la media de una muestra aleatoria de n = 100 calificaciones 
+# de una población con media: 60 y  varianza: 64. Por el Teorema Central del 
+# Límite, Y_barra iene aproximadamente una distribución normal con media: 60 y 
+# varianza: 64/100. Deseamos calcular P(Y_barra <= 58)
 
-p <- ggplot(mdf, aes(media1500.67)) + # 3.
-  geom_histogram(colour = 'yellow', 
-                 fill = 'purple',
-                 alpha = 0.7) + # Intensidad del color fill
-  geom_vline(xintercept = mean(media1500.67), 
-             linetype="dashed", color = "black") + 
-  ggtitle('Histograma para las 1500 medias') + 
-  labs(x = 'medias', y = 'Frecuencia')+
-  theme_get() +
-  theme(plot.title = element_text(hjust = 0.5, size = 16)) 
+pnorm(58, mean = 60, sd = 8/10)
 
-p
+# Debido a que esta probabilidad es muy pequeña, no es probable que la muestra 
+# de la escuela estudiada se pueda considerar como muestra aleatoria de una 
+# población con media: 60 y varianza: 64. La evidencia sugiere que la calificación 
+# promedio para esta preparatoria es menor que el promedio general de la población:60.
 
-mean(media1500.67); sd(media1500.67) # 4.
-
-mean(media1500.67); 1/5 # 5.
-sd(media1500.67); (1/5)/sqrt(67) # 6.
+# Wackerly, D. et al. (2010). Estadística Matemática con Aplicaciones. 
+# Cengage Learning Editores, S.A. de C.V.
