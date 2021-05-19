@@ -15,7 +15,7 @@ Abre el fichero que se encuentra en el repositorio y obten sus carácteristicas,
 2. Obtener la dimensión y el tipo de objeto que se obtiene
 
 3. Obtener los títulos que se estrenaron después del 2015. Almacenar este df en una variable llamada net.2015 
-(Hint: primero podrías filtrar solo aquellas filas del data frame que corresponden a estrenos después del 2015, por ejemplo, `dataframe[columna > 2015, ]`)
+(Hint: primero podrías filtrar solo aquellas filas del data frame que corresponden a estrenos después del 2015, por ejemplo, `dataframe[dataframe$columna > 2015, ]`)
 
 4. Escribir los resultados en un archivo .csv llamado res.netflix.csv
 (Hint: consulta la función `write.csv`)
