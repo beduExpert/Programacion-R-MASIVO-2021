@@ -1,4 +1,4 @@
-# Desarrollo
+# Ejemplo 1. Sesión 3. Desarrollo
 
 # Comenzando con gráficos simples; vamos a utilizar el dataset mtcars.
 
