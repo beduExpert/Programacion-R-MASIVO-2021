@@ -53,18 +53,6 @@ which(n > 4)
 a <- 2:6
 b <- 5:9
 
-# Construyendo la matriz utilizando la función cbind, para unirlos por culumna
-
-cbind(a,b)
-
-# Construyendo la matriz utilizando la función rbind, para unirlos por fila
-
-rbind(a,b)
-
-# Aplicando una función a las filas o columnas de una matriz (mean, sort)
-
-apply(n, 1, mean)
-apply(n, 2, sort)
 
 # Algunas operaciones básicas de matrices
 
