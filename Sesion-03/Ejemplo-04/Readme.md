@@ -27,12 +27,12 @@ Observamos algunos datos estadísticos sobre las variables
 summary(data)
 ```
 
-Como estamos ante la presencia de `NA´s` los eliminamos con `complete.cases()` y solamente seleccionamos aquellos sin `NA`s` y convertimos en factores la variable `Categoria` y `Grupo`
+Como estamos ante la presencia de `NA´s` los eliminamos con `na.omit()` y solamente seleccionamos aquellos sin `NA` y convertimos en factores la variable `Categoria` y `Grupo` , finalmente observa la estructura del df.
 
 ```R
-bien <- complete.cases(data)
-data <- data[bien,]
+data <- na.omit(data)
 data <- mutate(data, Categoria = factor(Categoria), Grupo = factor(Grupo))
+str(data) 
 ```
 
 Finalmente realizamos el boxplot
