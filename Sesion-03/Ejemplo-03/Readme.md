@@ -35,11 +35,11 @@ Otras características interesantes
 my_scatplot + labs(x = 'Weight (x1000lbs)', y = 'Miles per Gallon', colour = 'Number of\n Cylinders')
 ```
 
-Haciendo un facewrap con la variable `cyl`
+Se puede agregar la opción _facet_wrap()_ con la variable `cyl`, para divirir la gráfica por el número de cilindros, esto ayudará a obtener información adicional
 ```R
 my_scatplot + facet_wrap("cyl")
 ```
-Separándolas por tipo de transmisión (am =	Transmission (0 = automatic, 1 = manual))
+De igual manera que el _facet_wrap_ se puede dividir por tipo de transmisión utilizando la opción _facet_grid_ (am =	Transmission (0 = automatic, 1 = manual))
 ```R
 my_scatplot + facet_grid(am~cyl)
 ```
