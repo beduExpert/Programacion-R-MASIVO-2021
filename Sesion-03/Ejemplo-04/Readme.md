@@ -35,7 +35,7 @@ data <- mutate(data, Categoria = factor(Categoria), Grupo = factor(Grupo))
 str(data) 
 ```
 
-Finalmente realizamos el boxplot
+Ahora realizamos el boxplot para observar como se distribuyen los datos por grupo y categoría.
 ```R
 ggplot(data, aes(x = Categoria, y = Mediciones, fill = Grupo)) + geom_boxplot() +
   ggtitle("Boxplots") +
