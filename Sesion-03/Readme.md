@@ -21,7 +21,7 @@ Conocer mejor el conjunto de datos con el que se esté trabajando,
 - [Ejemplo 3](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-03/Ejemplo-03) Gráficos de dispersión
    - [Reto 2](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-03/Reto-02) Estadísticos de la NBA
 - [Ejemplo 4](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-03/Ejemplo-04) Boxplots y outliers
-- [Ejemplo 5](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-03/Ejemplo-05) Gráficos de líneas o barras
+- [Ejemplo 5](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-03/Ejemplo-05) Gráficos de líneas o barras con datos del COVID-19
 
 - [Postwork](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-03/Postwork)
 
