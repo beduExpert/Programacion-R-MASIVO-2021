@@ -1,6 +1,6 @@
 # Comenzamos leyendo un fichero, el cual contiene información sobre dos grupos de control G1 y G2, a los cuales se les realizó a cada uno una medición en 3 momentos diferentes C1, C2 y C3
 # library(dplyr) # para usar mutate
-data <- read.csv("../Sesion_03/boxp.csv")
+data <- read.csv("boxp.csv") # Coloca el archivo boxp.csv en tu WD
 
 # Revisamos el encabezado del fichero y el nombre de sus variables o columnas
 
@@ -13,9 +13,11 @@ summary(data)
 
 # Como estamos ante la presencia de NA´s los eliminamos con complete.cases() y solamente seleccionamos aquellos sin NAsy convertimos en factores la variableCategoriayGrupo`
 
-bien <- complete.cases(data)
-data <- data[bien,]
+data <- na.omit(data)
+
 data <- mutate(data, Categoria = factor(Categoria), Grupo = factor(Grupo))
+
+str(data)
 
 # Finalmente realizamos el boxplot
 
@@ -31,4 +33,3 @@ ggplot(data, aes(x = Categoria, y = Mediciones, fill = Grupo)) + geom_boxplot() 
   ggtitle("Boxplots") +
   xlab("Categorias") +
   ylab("Mediciones")
-
