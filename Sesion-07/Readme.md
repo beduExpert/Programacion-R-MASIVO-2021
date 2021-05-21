@@ -22,8 +22,8 @@ Durante el transcurso de esta sesión serás capaz de desarrollar las siguientes
 - [Ejemplo 3](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-07/Ejemplo-03) Variantes en la lectura de BDD con R
 - [Ejemplo 4](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-07/Ejemplo-04) Lectura de archivos JSON, XML y tablas en HTML
    - [Reto 2](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-07/Reto-02) Extracción de tablas en un HTML
-   - [Reto 3](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-07/Reto-03) Vinculación entre Github -> RStudio
-- [Postwork](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-07/Postwork) Conexión con Mongodb
+ 
+ - [Postwork](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-07/Postwork) Conexión con Mongodb
 
 
 
