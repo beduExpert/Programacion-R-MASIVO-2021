@@ -20,8 +20,6 @@ Ahora vas a practicar los conocimientos adquiridos en esta sesión principalment
 
 - Una vez hecha la conexión a la BDD, generar una busqueda con `dplyr` que devuelva el porcentaje de personas que hablan español en todos los países
 
-- Realizar una gráfica con `ggplot` que represente este porcentaje de tal modo que en el eje de las _Y_ aparezca el país y en _X_ el porcentaje, y que diferencíe entre aquellos que es su lengua oficial y los que no con diferente color (puedes utilizar la _geom_bin2d()_ y _coord_flip()_)
+- Realizar una gráfica con `ggplot` que represente este porcentaje de tal modo que en el eje de las _Y_ aparezca el país y en _X_ el porcentaje, y que diferencíe entre aquellos que es su lengua oficial y los que no, con diferente color (puedes utilizar _geom_bin2d()_ ó _geom_bar()_ y _coord_flip()_, si es necesario para visualizar mejor tus gráficas)
 
-- Una vez hecho esto hacer el _commit_ y _push_ para mandar tu archivo al repositorio de Github `Reto_Sesion_7`
-
- 
+- Una vez hecho esto hacer el _commit_ y _push_ para mandar tu archivo (`queries.R`), al repositorio de Github `Reto_Sesion_7`
