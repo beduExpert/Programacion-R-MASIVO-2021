@@ -1,83 +1,149 @@
-# Ejemplo 3. Dashboard dinámico
+# Ejemplo 3. Dashboard interactivo ejecutivo
 
 #### Objetivo
-- Crear un dashboard de tipo dinámico utilizando gráficas de tipo histograma, además de seleccionar las variables mediante botones.
+- Generar un dashboard interactivo que tenga una presentación profesional y que pueda interactuar con varias variables
 
 #### Requisitos
-- Utilería shiny
-- Generar un archivo de tipo Shiny webApp
-- Conocimiento de data frames
+- Haber realizado los ejercicios anteriores
+- Tener las librerías `shiny` y `shinydashboard`
+- Analizar el código siguiente
 
 #### Desarrollo
-
-Generar la Shiny webApp y dentro del archivo `ui.R` pegar el siguiente código
+Se comenzará utilizando el código siguiente ahora en un solo archivo `app.R` a diferencia de los ejemplos anteriores esta webApp se correrá en un solo fichero para que puedas observar la diferencia entre ambas formas de realizar las webApps.
 
 ```R
-# Generación de un dashboard de tipo de selección dinámica
+## app.R ##
+
+## Dashboard para el data set 'mtcars'
 
 library(shiny)
+library(shinydashboard)
+#install.packages("shinythemes")
+library(shinythemes)
 
-# Define UI for application that draws a histogram
-shinyUI(fluidPage(
+#Esta parte es el análogo al ui.R
+ui <- 
+    
+    fluidPage(
+         
+    dashboardPage(
+        
+    dashboardHeader(title = "Basic dashboard"),
+    
+    dashboardSidebar(
+       
+         sidebarMenu(
+            menuItem("Histograma", tabName = "Dashboard", icon = icon("dashboard")),
+            menuItem("Dispersión", tabName = "graph", icon = icon("area-chart")),
+            menuItem("Data Table", tabName = "data_table", icon = icon("table")),
+            menuItem("Imágen", tabName = "img", icon = icon("file-picture-o"))
+                    )
+        
+    ),
+    
+    dashboardBody(
 
-    # Application title
-    titlePanel("Elecciones dinámicas de Data Frames"),
-
-    # Sidebar with a slider input for number of bins
-    sidebarLayout(
-        sidebarPanel(
-            selectInput("dataset", "Selección del dataset", 
-                        c("mtcars", "rock", "iris")), 
-            uiOutput("var")
-        ),
-
-        # Show a plot of the generated distribution
-        mainPanel(plotOutput("plot")
-        )
+        tabItems(
+            
+            # Histograma
+            tabItem(tabName = "Dashboard",
+                    fluidRow(
+                        titlePanel("Histograma de las variables del data set mtcars"), 
+                        selectInput("x", "Seleccione el valor de X",
+                                    choices = names(mtcars)),
+                        
+                        selectInput("zz", "Selecciona la variable del grid", 
+                                
+                                        choices = c("cyl", "vs", "gear", "carb")),
+                        box(plotOutput("plot1", height = 250)),
+                        
+                             box(
+                             title = "Controls",
+                             sliderInput("bins", "Number of observations:", 1, 30, 15)
+                        )
+                    )
+            ),
+       
+            # Dispersión
+               tabItem(tabName = "graph", 
+               fluidRow(
+                   titlePanel(h3("Gráficos de dispersión")),
+                   selectInput("a", "Selecciona el valor de x",
+                               choices = names(mtcars)),
+                   selectInput("y", "Seleccione el valor de y",
+                               choices = names(mtcars)),
+                   selectInput("z", "Selecciona la variable del grid", 
+                               choices = c("cyl", "vs", "gear", "carb")),
+                  box(plotOutput("output_plot", height = 300, width = 460) )
+                   
+               )
+               ),
+            
+            
+            
+            tabItem(tabName = "data_table",
+                    fluidRow(        
+                        titlePanel(h3("Data Table")),
+                        dataTableOutput ("data_table")
+                    )
+            ), 
+            
+            tabItem(tabName = "img",
+                    fluidRow(
+                        titlePanel(h3("Imágen de calor para la correlación de las variables")),
+                        img( src = "cor_mtcars.png", 
+                             height = 350, width = 350)
+                    )
+            )
+            
+            )
     )
-))
-```
+)
+)
 
-Para el archivo `server.R` pega el siguiente código, además trata de identificar que hacen cada uno de los comandos que se presentan a continuación:
+#De aquí en adelante es la parte que corresponde al server
 
-```R 
-# Generación de un dashboard de tipo de selección dinámica
-
-library(shiny)
-
-# Define server logic required to draw a histogram
-shinyServer(function(input, output) {
-
-   datasetImput <- reactive(
-       switch(input$dataset, 
-              "rock" = rock, 
-              "mtcars" = mtcars, 
-              "iris" = iris)
-   )
-
-   output$var <- renderUI({
+server <- function(input, output) {
+library(ggplot2)
+    
+    #Gráfico de Histograma
+    output$plot1 <- renderPlot({
        
-       radioButtons("varname", 
-                    "elige una variable", 
-                    names(datasetImput()))
-   })
+        x <- mtcars[,input$x]
+         bin <- seq(min(x), max(x), length.out = input$bins + 1)
+
+          ggplot(mtcars, aes(x, fill = mtcars[,input$zz])) + 
+             geom_histogram( breaks = bin) +
+              labs( xlim = c(0, max(x))) + 
+              theme_light() + 
+              xlab(input$x) + ylab("Frecuencia") + 
+              facet_grid(input$zz)
+              
+        
+        })
+    
+    # Gráficas de dispersión
+    output$output_plot <- renderPlot({ 
+        
+        ggplot(mtcars, aes(x =  mtcars[,input$a] , y = mtcars[,input$y], 
+            colour = mtcars[,input$z] )) + 
+            geom_point() +
+            ylab(input$y) +
+            xlab(input$x) + 
+            theme_linedraw() + 
+            facet_grid(input$z)  #selección del grid
+        
+        })   
+    
+    #Data Table
+    output$data_table <- renderDataTable( {mtcars}, 
+                                          options = list(aLengthMenu = c(5,25,50),
+                                                         iDisplayLength = 5)
+        )
    
-   output$plot <- renderPlot({
-       if(!is.null(input$varname)){
-           if(!input$varname %in% names(datasetImput())){
-               colname <- names(datasetImput())[1]
-               
-           } else {
-               colname <- input$varname
-           }
-       hist(datasetImput()[,colname],
-            main = paste("Histograma de", colname), 
-            xlab = colname)
-           }
-       
-   })
-   
-    })
+}
+    
+
+shinyApp(ui, server)
 
 ```
-Ejecuta la webApp
