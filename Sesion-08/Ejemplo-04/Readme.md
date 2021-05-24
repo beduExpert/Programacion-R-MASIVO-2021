@@ -1,74 +1,17 @@
-# Ejemplo 4. Dashboard condicional
+# Ejemplo 4. Publica tu dashboard 
 
-#### Objetivo.
-
-Desarrollar un dashboard de tipo condicional para la selección de dos tipos de gráficas.
+#### Objetivo 
+Realizar la publicación de tu dashboard dentro de un servidor ya sea de Shiny o de RStudio, para poder compartirlo a traves de internet y que los que tengan el link puedan hacer uso del dashboard
 
 #### Requisitos
-- Librería shiny
-- Manejo de data frames
-- Haber realizado los ejemplos anteriores
+- Haber realizado los ejemplos de la sesión
+- Tener un dashboard
+- Conexión a internet
 
 #### Desarrollo
 
-Ahora lo que tendrás que hacer es dentro del archivo `ui.R` utilizar el siguiente código
+Para el desarrollo de este ejemplo se adjunta el siguiente video en el que puedes visualizar como se comparte un dashboard, es una tarea sencilla para comenzar a la publicación de tus dashboards.
 
-```R
-#Condicional
-library(shiny)
+[![](portada.png)](https://www.loom.com/share/aca22ba5b4034823a61c004bb8727f7a)
 
-
-shinyUI(fluidPage(
-
-    # Application title
-    titlePanel("Elecciones condicionales"),
-
-    # Sidebar with a slider input for number of bins
-    sidebarPanel(
-       selectInput("plot_type", "Tipo de Gráfica", 
-                   c("Gráfica de dispersión" = "Scatter", 
-                     "Histograma" = "histogram")) ,
-       
-       conditionalPanel(condition = "input.plot_type != 'Scatter' ",
-                        ),
-       
-       conditionalPanel(condition = "input.plot_type != 'histogram' ", 
-                        selectInput("x", "Selecciona la variable en eje X", 
-                                    choices = names(mtcars)
-                                    ))
-        
-        
-        ),
-
-        # Show a plot of the generated distribution
-        mainPanel(
-            plotOutput("plot")
-        )
-    )
-)
-```
-
-Dentro del archivo `server.R` pegar el siguiente código y analizar que función desempeñan los inputs en este caso
-
-```R
-#Condicional
-
-library(shiny)
-
-
-shinyServer(function(input, output) {
-
- output$plot <- renderPlot({
-    if (input$plot_type == "histogram") {
-        hist(mtcars[,input$x], xlab =input$x, main = paste("Histograma de",input$x) )
-        
- }  else  {
-         plot(mtcars[,input$x], mtcars$hp, xlab = input$x, ylab = "hp")
- }      
-
- })
- 
-})
-```
-
-
+https://www.loom.com/share/aca22ba5b4034823a61c004bb8727f7a
