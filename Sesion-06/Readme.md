@@ -13,16 +13,15 @@ En esta sesión estudiaremos temas relacionados con los siguientes puntos:
 - 
 ## 📂 Organización de la clase
 
-- [Ejemplo 1](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-06/Ejemplo-01) Ejemplos de series de tiempo y técnicas descriptivas
-- [Ejemplo 2](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-06/Ejemplo-02) Modelos estocásticos básicos, modelos estacionarios y predicción
-   - [Reto 1](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-06/Reto-01) Proceso AR(1)
+- [Ejemplo 1](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-06/Ejemplo-01) Ejemplos de series de tiempo y técnicas descriptivas
+- [Ejemplo 2](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-06/Ejemplo-02)  Modelos estocásticos básicos, modelos estacionarios y predicción
+   - [Reto 1](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-06/Reto-01) Proceso AR(1)
+- [Ejemplo 3](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-06/Ejemplo-03) Modelos no estacionarios y predicción
+- [Reto 2](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-06/Reto-02) Proceso ARIMA(1, 1, 1)
 
-## Opcionales 
-
-- [Ejemplo 3](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-06/Ejemplo-03) Modelos no estacionarios y predicción
-- [Reto 2](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-06/Reto-02) Proceso ARIMA(1, 1, 1)
-- [Reto 3](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-06/Reto-03) Gráfica de series de tiempo
--  [Postwork](https://github.com/beduExpert/Programacion-con-R-Santander/tree/master/Sesion-06/Postwork)
+Opcional
+- [Reto 3](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-06/Reto-03) Gráfica de series de tiempo
+-  [Postwork](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-06/Postwork)
 
 
 
