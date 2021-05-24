@@ -4,8 +4,10 @@
     
 # Serie de Producción de Electricidad de Australia
 
+# Establecer el directorio de trabajo según corresponda
 CBE <- read.csv("cbe.csv", header = TRUE)
 Elec.ts <- ts(CBE[, 3], start = 1958, freq = 12)
+
 plot(Elec.ts, xlab = "", ylab = "")
 title(main = "Serie de Producción de Electricidad Australiana",
       ylab = "Producción de electricidad (GWh)",
@@ -57,32 +59,6 @@ x <- arima.sim(model = list(order = c(1, 1, 1), ar = 0.5, ma = 0.3), n = 1000)
 ###
 
 arima(x, order = c(1, 1, 1))
-
-####################################################################################################################################################
-
-    # Serie de producción de cerveza
-
-Beer.ts <- ts(CBE[, 2], start = 1958, freq = 12)
-plot(Beer.ts, xlab = "", ylab = "")
-title(main = "Serie de Producción de Cerveza en Australia",
-      ylab = "Producción de Cerveza (Megalitros)",
-      xlab = "Mes")
-
-###
-
-Beer.ima <- arima(Beer.ts, order = c(0, 1, 1))
-Beer.ima
-
-###
-
-acf(resid(Beer.ima), main = "")
-title(main = "Autocorrelaciones para los Residuales del Ajuste",
-      sub = expression(x[t]==x[t-1]+w[t]-0.33*w[t-1]))
-
-###
-
-Beer.1991 <- predict(Beer.ima, n.ahead = 12)
-sum(Beer.1991$pred)
 
 #### Modelos Arima estacionales
 
@@ -164,4 +140,10 @@ title(main = "Predicción para la serie de producción de electricidad",
       ylab = "Producción de electricidad (GWh)")
 
 
+# Inspirado en la siguiente bibliografía:
+  
+# P. Cowpertwait & A. Metcalfe. (2009). Introductory Time Series with R. 233 Spring Street, New York, NY 10013, USA: Springer Science+Business Media, LLC.
 
+# Otra referencia:
+  
+# J. Cryer & K. Chan. (2008). Time Series Analysis With Applications in R. 233 Spring Street, New York, NY 10013, USA: Springer Science+Business Media, LLC.
