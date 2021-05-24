@@ -1,15 +1,7 @@
 #### Técnicas descriptivas: gráficas, tendencias y variación estacional
 
-library(TSA)
+# Datos de pasajeros aéreos (en miles) de una aerolínea
 
-data(oilfilters); plot(oilfilters, type = "o", ylab = "Ventas", xlab = "Tiempo", main = "Ventas Mesuales ")
-plot(oilfilters, type = "l", ylab = "Ventas", xlab = "Tiempo",
-                 main = "Ventas Mensuales de Filtro de Aceite",
-                 sub = "Símbolos Especiales")
-points(y = oilfilters, x = time(oilfilters),
-pch = as.vector(season(oilfilters)))
-
-data(AirPassengers)
 AP <- AirPassengers
 AP
 
@@ -27,24 +19,15 @@ plot(AP, ylab = "Pasajeros (1000's)", xlab = "Tiempo",
 
 ################################################
 
-layout(1:2)
-plot(aggregate(AP), xlab = "Tiempo",
-     main = "Reserva de pasajeros aéreos internacionales", 
-     sub = "Estados Unidos en el periodo 1949-1960")
-
-boxplot(AP ~ cycle(AP),
-        xlab = "Boxplot de valores estacionales",
-        sub = "Estados Unidos en el periodo 1949-1960",
-        main = "Reserva de pasajeros aéreos internacionales")
-dev.off()
-
-################################################
-
 # https://github.com/AtefOuni/ts/tree/master/Data
 
 # Series de Tiempo Múltiple
 
 # Serie de producción de electricidad, cerveza y chocolate
+
+# Establecer el directorio de trabajo según corresponda
+
+# setwd()
 
 CBE <- read.csv("cbe.csv", header = TRUE)
 CBE[1:4,]
@@ -66,16 +49,16 @@ plot(cbind(Elec.ts, Beer.ts, Choc.ts),
 Global <- scan("global.txt")
 Global.ts <- ts(Global, st = c(1856, 1), end = c(2005, 12), fr = 12)
 Global.annual <- aggregate(Global.ts, FUN = mean)
-plot(Global.ts, xlab = "Tiempo", ylab = "Temperatura en Â°C", main = "Serie de Temperatura Global",
+plot(Global.ts, xlab = "Tiempo", ylab = "Temperatura en °C", main = "Serie de Temperatura Global",
      sub = "Serie mensual: Enero de 1856 a Diciembre de 2005")
-plot(Global.annual, xlab = "Tiempo", ylab = "Temperatura en Â°C", main = "Serie de Temperatura Global",
+plot(Global.annual, xlab = "Tiempo", ylab = "Temperatura en °C", main = "Serie de Temperatura Global",
      sub = "Serie anual de temperaturas medias: 1856 a 2005")
 
 ################################################
 
 New.series <- window(Global.ts, start = c(1970, 1), end = c(2005, 12)) 
 New.time <- time(New.series)
-plot(New.series, xlab = "Tiempo", ylab = "Temperatura en Â°C", main = "Serie de Temperatura Global",
+plot(New.series, xlab = "Tiempo", ylab = "Temperatura en °C", main = "Serie de Temperatura Global",
      sub = "Serie mensual: Enero de 1970 a Diciembre de 2005"); abline(reg = lm(New.series ~ New.time))
 
 
@@ -95,9 +78,17 @@ Tendencia <- Elec.decom.A$trend
 Estacionalidad <- Elec.decom.A$seasonal
 Aleatorio <- Elec.decom.A$random
 
+plot(Elec.ts, 
+     xlab = "Tiempo", main = "Datos de Producción de Electricidad", 
+     ylab = "Producción de electricidad", lwd = 2,
+     sub = "Tendencia con efectos estacionales aditivos sobrepuestos")
+lines(Tendencia, lwd = 2, col = "blue")
+lines(Tendencia + Estacionalidad, lwd = 2, col = "red", lty = 2)
+
 ts.plot(cbind(Tendencia, Tendencia + Estacionalidad), 
         xlab = "Tiempo", main = "Datos de Producción de Electricidad", 
-        ylab = "Producción de electricidad", lty = 1:2,
+        ylab = "Producción de electricidad", lty = 1:2, 
+        col = c("blue", "red"), lwd = 2,
         sub = "Tendencia con efectos estacionales aditivos sobrepuestos")
 
 Tendencia[20] + Estacionalidad[20] + Aleatorio[20]
@@ -118,12 +109,18 @@ Trend <- Elec.decom.M$trend
 Seasonal <- Elec.decom.M$seasonal
 Random <- Elec.decom.M$random
 
-ts.plot(cbind(Trend, Trend*Seasonal), xlab = "Tiempo", main = "Datos de Producción de Electricidad", 
-        ylab = "Producción de electricidad", lty = 1:2,
-        sub = "Tendencia con efectos estacionales multiplicativos sobrepuestos")
+plot(Elec.ts, 
+     xlab = "Tiempo", main = "Datos de Producción de Electricidad", 
+     ylab = "Producción de electricidad", lwd = 2,
+     sub = "Tendencia con efectos estacionales multiplicativos sobrepuestos")
+lines(Trend, lwd = 2, col = "blue")
+lines(Trend * Seasonal, lwd = 2, col = "red", lty = 2)
 
-Trend[7]*Seasonal[7]*Random[7]
-Elec.ts[7]
+ts.plot(cbind(Trend, Trend * Seasonal), 
+        xlab = "Tiempo", main = "Datos de Producción de Electricidad", 
+        ylab = "Producción de electricidad", lty = 1:2, 
+        col = c("blue", "red"), lwd = 2,
+        sub = "Tendencia con efectos estacionales multiplicativos sobrepuestos")
 
 Trend[100]*Seasonal[100]*Random[100]
 Elec.ts[100]
