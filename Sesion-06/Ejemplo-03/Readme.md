@@ -16,8 +16,10 @@ Tomamos datos de https://github.com/AtefOuni/ts/tree/master/Data
 Serie de producción de electricidad de Australia
 
 ```R
+# Establecer el directorio de trabajo según corresponda
 CBE <- read.csv("cbe.csv", header = TRUE)
 Elec.ts <- ts(CBE[, 3], start = 1958, freq = 12)
+
 plot(Elec.ts, xlab = "", ylab = "")
 title(main = "Serie de Producción de Electricidad Australiana",
       ylab = "Producción de electricidad (GWh)",
@@ -70,32 +72,6 @@ x <- arima.sim(model = list(order = c(1, 1, 1), ar = 0.5, ma = 0.3), n = 1000)
 arima(x, order = c(1, 1, 1))
 ```
 
-Serie de producción de cerveza
-
-```R
-Beer.ts <- ts(CBE[, 2], start = 1958, freq = 12)
-plot(Beer.ts, xlab = "", ylab = "")
-title(main = "Serie de Producción de Cerveza en Australia",
-      ylab = "Producción de Cerveza (Megalitros)",
-      xlab = "Mes")
-```
-
-```R
-Beer.ima <- arima(Beer.ts, order = c(0, 1, 1))
-Beer.ima
-```
-
-```R
-acf(resid(Beer.ima), main = "")
-title(main = "Autocorrelaciones para los Residuales del Ajuste",
-      sub = expression(x[t]==x[t-1]+w[t]-0.33*w[t-1]))
-```
-
-```R
-Beer.1991 <- predict(Beer.ima, n.ahead = 12)
-sum(Beer.1991$pred)
-```
-
 #### Modelos Arima estacionales
 
 Procedimiento de ajuste
@@ -127,7 +103,7 @@ AIC(Elec.AR)
 AIC(Elec.MA)
 ```
 
-Función para buscar un "buen" modelo (No basarse únicamente en los resultados de aplicar la función)
+Función para buscar un "buen" modelo (**No basarse únicamente en los resultados de aplicar la función**)
 
 ```R
 get.best.arima <- function(x.ts, maxord = c(1, 1, 1, 1, 1, 1)){
