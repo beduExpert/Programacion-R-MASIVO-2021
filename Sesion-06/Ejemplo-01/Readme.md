@@ -13,20 +13,9 @@ En este ejemplo se hará la visualización y descomposición de series de tiempo
 
 #### Técnicas descriptivas: gráficas, tendencias y variación estacional
 
-El primer dataset corresponde a las ventas mensuales de un filtro de aceite en diversos concesionarios para equipo de construcción.  
-```R
-library(TSA)
-data(oilfilters); plot(oilfilters, type = "o", ylab = "Ventas", xlab = "Tiempo", main = "Ventas Mesuales ")
-plot(oilfilters, type = "l", ylab = "Ventas", xlab = "Tiempo",
-                 main = "Ventas Mensuales de Filtro de Aceite",
-                 sub = "Símbolos Especiales")
-points(y = oilfilters, x = time(oilfilters),
-pch = as.vector(season(oilfilters)))
-```
-Ahora utilizaremos el dataset AirPAssengers, el cual contiene datos de serie de tiempo correspondiente a pasajeros aéreos.
+Datos de pasajeros aéreos (en miles) de una aerolínea
 
 ```R
-data(AirPassengers)
 AP <- AirPassengers
 AP
 ```
@@ -45,26 +34,15 @@ plot(AP, ylab = "Pasajeros (1000's)", xlab = "Tiempo",
      sub = "Estados Unidos en el periodo 1949-1960")
 ```
 
-```R
-layout(1:2)
-plot(aggregate(AP), xlab = "Tiempo",
-     main = "Reserva de pasajeros aéreos internacionales", 
-     sub = "Estados Unidos en el periodo 1949-1960")
-
-boxplot(AP ~ cycle(AP),
-        xlab = "Boxplot de valores estacionales",
-        sub = "Estados Unidos en el periodo 1949-1960",
-        main = "Reserva de pasajeros aéreos internacionales")
-dev.off()
-```
-
-Algunos datos en https://github.com/AtefOuni/ts/tree/master/Data
-
 #### Series de Tiempo Múltiple
 
 Serie de producción de electricidad, cerveza y chocolate
 
+Algunos datos en https://github.com/AtefOuni/ts/tree/master/Data
+
 ```R
+# Establecer el directorio de trabajo según corresponda
+# setwd()
 CBE <- read.csv("cbe.csv", header = TRUE)
 CBE[1:4,]
 class(CBE)
@@ -117,9 +95,17 @@ Tendencia <- Elec.decom.A$trend
 Estacionalidad <- Elec.decom.A$seasonal
 Aleatorio <- Elec.decom.A$random
 
+plot(Elec.ts, 
+     xlab = "Tiempo", main = "Datos de Producción de Electricidad", 
+     ylab = "Producción de electricidad", lwd = 2,
+     sub = "Tendencia con efectos estacionales aditivos sobrepuestos")
+lines(Tendencia, lwd = 2, col = "blue")
+lines(Tendencia + Estacionalidad, lwd = 2, col = "red", lty = 2)
+
 ts.plot(cbind(Tendencia, Tendencia + Estacionalidad), 
         xlab = "Tiempo", main = "Datos de Producción de Electricidad", 
-        ylab = "Producción de electricidad", lty = 1:2,
+        ylab = "Producción de electricidad", lty = 1:2, 
+        col = c("blue", "red"), lwd = 2,
         sub = "Tendencia con efectos estacionales aditivos sobrepuestos")
 
 Tendencia[20] + Estacionalidad[20] + Aleatorio[20]
@@ -142,12 +128,18 @@ Trend <- Elec.decom.M$trend
 Seasonal <- Elec.decom.M$seasonal
 Random <- Elec.decom.M$random
 
-ts.plot(cbind(Trend, Trend*Seasonal), xlab = "Tiempo", main = "Datos de Producción de Electricidad", 
-        ylab = "Producción de electricidad", lty = 1:2,
-        sub = "Tendencia con efectos estacionales multiplicativos sobrepuestos")
+plot(Elec.ts, 
+     xlab = "Tiempo", main = "Datos de Producción de Electricidad", 
+     ylab = "Producción de electricidad", lwd = 2,
+     sub = "Tendencia con efectos estacionales multiplicativos sobrepuestos")
+lines(Trend, lwd = 2, col = "blue")
+lines(Trend * Seasonal, lwd = 2, col = "red", lty = 2)
 
-Trend[7]*Seasonal[7]*Random[7]
-Elec.ts[7]
+ts.plot(cbind(Trend, Trend * Seasonal), 
+        xlab = "Tiempo", main = "Datos de Producción de Electricidad", 
+        ylab = "Producción de electricidad", lty = 1:2, 
+        col = c("blue", "red"), lwd = 2,
+        sub = "Tendencia con efectos estacionales multiplicativos sobrepuestos")
 
 Trend[100]*Seasonal[100]*Random[100]
 Elec.ts[100]
@@ -160,4 +152,3 @@ P. Cowpertwait & A. Metcalfe. (2009). Introductory Time Series with R. 233 Sprin
 Otra referencia:
 
 J. Cryer & K. Chan. (2008). Time Series Analysis With Applications in R. 233 Spring Street, New York, NY 10013, USA: Springer Science+Business Media, LLC.
-
