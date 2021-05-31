@@ -14,7 +14,7 @@
 
 # Desarrollo
 
-Se debe seguir el código propuesto y tratar de comprender que es lo que realiza
+Se debe seguir el código propuesto y tratar de comprender qué es lo que realiza
 
 
 ##### Crear matrices. 
