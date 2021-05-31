@@ -1,4 +1,4 @@
-# Sesion 1: Introducción a R y Software
+# Sesión 1: Introducción a R y Software
 
 ## :dart: Objetivos
 
@@ -6,13 +6,13 @@ Conocer las nociones básicas para poder manipular data sets, poder realizar lec
 
 ## 🤓 ¿Que aprenderán? 
 
-Durante el transcurso de esta sesión serás capaz de desarrollar las siguientes capacidades de R 
+Durante el transcurso de esta sesión serás capaz de desarrollar las siguientes capacidades de R:
 
-- Tipos de datos y objetos (vectores, df, matrices), en R
+- Tipos de datos y objetos (vectores, df, matrices), en R.
 - Descarga y lectura de data sets.
-- install.packages, library
-- Loops
-- Pseudocodigo
+- install.packages, library.
+- Loops.
+- Pseudocódigo.
 
 
 ## 📂 Organización de la clase
