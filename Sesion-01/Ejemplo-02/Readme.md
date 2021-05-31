@@ -61,11 +61,11 @@ b <- 5:9
 ```
 
 Algunas operaciones básicas de matrices que puede intentar son: 
-   - 1. Producto matricial: A %*% B
-   - 2. Producto elemento a elemento: A*B
-   - 3. Traspuesta: t(A)  
-   - 4. Determinante: det(A)
-   - 5. Extraer la diagonal: diag(A)
-   - 6. Resolver un sistema de ecuaciones lineales (\( Ax=b \)): solve(A,b)
-   - 7. Inversa: solve(A)
-   - 8. Autovalores y autovectores: eigen(A)
+   -  Producto matricial: A %*% B
+   -  Producto elemento a elemento: A*B
+   -  Traspuesta: t(A)  
+   -  Determinante: det(A)
+   -  Extraer la diagonal: diag(A)
+   -  Resolver un sistema de ecuaciones lineales (\( Ax=b \)): solve(A,b)
+   -  Inversa: solve(A)
+   -  Autovalores y autovectores: eigen(A)
