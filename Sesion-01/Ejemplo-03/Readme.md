@@ -8,13 +8,11 @@
 
 # Requisitos
 
-1. Prework
-2. R, RStudio
-3. Ejemplos 1 y 2
+1. Haber estudiado el prework
+2. Tener previamente instalados R y RStudio
 
 # Desarrollo
-
-Seguir el contenido y tratar de comprender el código mostrado a continuación
+Ejecutar las líneas de comando y tratar de comprender qué realiza cada parte de sus entradas
 
 #### Listas 
 ```R
