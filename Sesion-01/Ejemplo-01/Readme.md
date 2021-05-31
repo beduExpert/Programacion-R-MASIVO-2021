@@ -2,13 +2,13 @@
 #   Ejemplo 1- Tipos de datos y vectores
 
 # Objetivo
-- Poder determinar el tipo de variables y objetos que se utilizan
-- Creación y manipulación de objetos (vectores, matrices, data frames, entre otros)
-- Operaciones básicas 
+- Poder determinar el tipo de variables y objetos que se utilizan.
+- Creación y manipulación de objetos (vectores, matrices, data frames, entre otros).
+- Operaciones básicas. 
 
 # Requisitos
 - Tener previamente instalados R y RStudio
-- Haber leido y comprendido el Prework
+- Haber leído y comprendido el Prework
 
 # Desarrollo
 Se tiene una serie de códigos los cuales deberán irse corriento línea a línea, recordar que siempre se ejecuta una línea presionando **Ctrl + Enter**
@@ -96,16 +96,15 @@ Reciclaje, al hacer operaciones entre vectores, `R` repetirá los valores del ve
 c(1, 2) + c(7, 8, 9, 10)
 ```
 
-Existen varias operaciones entre vectores, intenta probar algunas de las siguientes: 
-```R
-a + b     
-a - b     
-a*b
-a/b
-a^2
-a1 <- a*0.5 + b^2
-a1[1]
-```
+Existen varias operaciones entre vectores, intenta probar algunas de las siguientes comandos con los vectores **a** y **b**: 
+  - a + b     
+  - a - b     
+  - a*b
+  - a/b
+  - a^2
+  - a1 <- a*0.5 + b^2
+  - a1[1]
+
 
 ![](Ejemplo1.jpeg)
 
