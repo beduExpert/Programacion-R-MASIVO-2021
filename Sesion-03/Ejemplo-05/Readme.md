@@ -9,8 +9,7 @@
 - Uso de `ggplot`
 
 #### Desarrollo
-Al inicio es posible que no comprendas todo el código, trata de leerlo e ir asimilando que es lo que realiza cada línea. 
-
+Al inicio es posible que no comprendas todo el código, trata de leerlo e ir asimilando qué es lo que realiza cada línea. 
 
 Ahora se leerá el archivo __C19Mexico.csv__ con los infectados y muertos acumulados para cada fecha, creado previamente durante la __sesión 2__
 
@@ -30,7 +29,7 @@ str(mex)
 A continuación, te presentamos un panorama de la situación que se ha estado viviendo en México, debido al coronavirus. Es información simple, que puede resultar valiosa para algunas personas.
 Las gráficas, las hemos realizado utilizando datos que puedes encontrar en el siguiente sitio: https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases
 
-- Acumulado de Casos Confirmados
+- Acumulado de casos confirmados
 ```R
 p <- ggplot(mex, aes(x=Fecha, y=Infectados)) + 
   geom_line( color="blue") + 
@@ -59,7 +58,7 @@ p <- p +
 p
 ```
 
-- Casos Confirmados por Día
+- Casos confirmados por día
 ```R
 p <- ggplot(mex, aes(x=Fecha, y=NI)) + 
   geom_line(stat = "identity") + 
@@ -84,7 +83,7 @@ p
 ```
 
 
-- Muertes Acumuladas
+- Muertes ccumuladas
 ```R
 mexm <- subset(mex, Muertos > 0) # Tomamos el subconjunto desde que comenzaron las muertes
 
@@ -109,7 +108,7 @@ p <- p +
 p
 ```
 
-- Muertes por Día
+- Muertes por día
 ```R
 p <- ggplot(mexm, aes(x=Fecha, y=NM)) + 
   geom_line(stat = "identity") + 
@@ -131,7 +130,7 @@ p <- p +
 p
 ```
 
-- Acumulado de Casos Confirmados y Muertes
+- Acumulado de casos confirmados y muertes
 ```R
 p <- ggplot(mex, aes(x=Fecha, y=Infectados)) + geom_line(color="blue") + 
   labs(x = "Fecha", 
@@ -154,7 +153,7 @@ p <- p +
 p
 ```
 
-- Tasa de Letalidad:
+- Tasa de letalidad:
 La tasa de letalidad observada para un día determinado, la calculamos dividiendo las muertes acumuladas reportadas hasta ese día, entre el acumulado de casos confirmados para el mismo día. Multiplicamos el resultado por 100 para reportarlo en forma de porcentaje. Lo que obtenemos es el porcentaje de muertes del total de casos confirmados.
 
 ```R
@@ -178,7 +177,7 @@ p <- p +
 p
 ```
 
-- Factores de Crecimiento:
+- Factores de crecimiento:
 
 El factor de crecimiento de infectados para un día determinado, lo calculamos al dividir el acumulado de infectados para ese día, entre el acumulado de infectados del día anterior. El factor de crecimiento de muertes lo calculamos de forma similar.
 ```R
