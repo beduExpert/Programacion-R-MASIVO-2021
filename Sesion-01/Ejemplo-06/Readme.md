@@ -5,11 +5,11 @@
 - Ejecutar un loop, for, while, if y if-else
 
 # Requisitos
-1. R, RStudio
-2. Prework 
+1. Haber estudiado el prework
+2. 2.	Tener previamente instalados R y RStudio 
 
 # Desarrollo
-Durante este ejemplo se darán las bases para inicializar una variable que sea utilizada dentro de un loop, adicionalmente se utilizaran los comandos while, if y if-else para poder utilizarlos adecuadamente
+Durante este ejemplo se darán las bases para inicializar una variable que sea utilizada dentro de un loop, adicionalmente se utilizarán los comandos while, if y if-else para poder aplicarlos adecuadamente.
 
 Este ejemplo elevará al cuadrado las primeras 10 entradas de un vector generado aleatóriamente de 20 entradas 
 ```R
