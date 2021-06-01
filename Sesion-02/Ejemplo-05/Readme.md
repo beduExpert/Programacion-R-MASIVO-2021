@@ -15,7 +15,7 @@
 
 #### Función `apply`
 
-La función `apply` regresa un vector, arreglo o lista de valores obtenidos al aplicar una función a los márgenes de un arreglo o matriz. Por ejemplo
+La función `apply` regresa un vector, arreglo o lista de valores obtenidos al aplicar una función a los márgenes de un arreglo o matriz. Por ejemplo:
 
 ```R
 X <- matrix(1:49, ncol = 7)
@@ -26,7 +26,7 @@ apply(X, 2, median) # cálculo de la mediana para las columnas
 
 #### Función `lapply`
 
-La función `lapply` se usa de la siguiente manera `lapply(X, FUN, ...)` donde `X` puede ser un vector o una lista, `FUN` es una función que será aplicada a cada elemento de `X` y `...` representa argumentos opcionales para `FUN`. `lapply` regresa una lista de la misma longitud que `X`, en donde cada elemento de la lista es el resultado de aplicar `FUN` al elemento que corresponde de `X`.
+La función `lapply` se usa como se muestra a continuación: `lapply(X, FUN, ...)` donde `X` puede ser un vector o una lista, `FUN` es una función que será aplicada a cada elemento de `X` y `...` representa argumentos opcionales para `FUN`. `lapply` regresa una lista de la misma longitud que `X`, en donde cada elemento de la lista es el resultado de aplicar `FUN` al elemento que corresponde de `X`.
 
 Vamos a utilizar `lapply` para leer un conjunto de archivos csv de manera consecutiva y "rápida", para esto debemos especificar un directorio de trabajo y descargar los archivos csv en nuestro directorio, por ejemplo, puede crear la carpeta soccer para descargar los datos
 
@@ -42,13 +42,13 @@ download.file(url = u1213, destfile = "SP1-1213.csv", mode = "wb")
 download.file(url = u1314, destfile = "SP1-1314.csv", mode = "wb")
 ```
 
-podemos visualizar el nombre de los archivos descargados en un vector de strings de la siguiente manera
+podemos visualizar el nombre de los archivos descargados en un vector de strings de la siguiente manera:
 
 ```R
 dir()
 ```
 
-podemos leer con una sola instrucción los archivos descargados usando la función `lapply` de la siguiente manera
+podemos leer con una sola instrucción los archivos descargados usando la función `lapply` de la siguiente manera:
 
 ```R
 lista <- lapply(dir(), read.csv) # Guardamos los archivos en lista
@@ -62,7 +62,7 @@ head(lista[[1]]); head(lista[[2]]); head(lista[[3]]); head(lista[[4]])
 ```
 
 cada uno de los data frames que tenemos en `lista`, los podemos combinar en un único data frame utilizando las funciones `rbind` y `do.call`
-de la siguiente manera
+de la siguiente manera:
 
 #### Función do.call
 
