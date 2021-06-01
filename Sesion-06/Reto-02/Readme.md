@@ -7,6 +7,7 @@
 
 #### REQUISITOS 
 
+- Tener R y Rstudio instalado
 - Haber cubierto los temas en el prework
 - Realizar los ejemplos
 
