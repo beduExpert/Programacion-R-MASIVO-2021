@@ -1,11 +1,15 @@
 # Ejemplo 2. Creación de un Dashboard con pestañas y data tables
 
 #### Objetivo
+
+- Crear un dashboard simple
 - Agregar pestañas al dashboard
 - Agregar elementos
 
 #### Requisitos
-- Crear un dashboard simple
+- Tener instalado R y RStudio
+- Haber estudiado el prework
+- paquete _shiny_
 
 #### Desarrollo
 
