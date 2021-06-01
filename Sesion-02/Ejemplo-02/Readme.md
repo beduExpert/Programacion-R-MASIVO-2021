@@ -23,7 +23,7 @@ entonces la salida de la instrucción nos muestra el tipo de objeto, número de 
 
 #### Función `summary`
 
-La función `summary` es una función genérica usada para obtener resumenes de diferentes objetos de `R`, por ejemplo
+La función `summary` es una función genérica usada para obtener resumenes de diferentes objetos de `R`, por ejemplo:
 
 ```R
 summary(1:100)
@@ -49,17 +49,17 @@ La función `head` devuelve la primera parte de un data frame, tabla, matriz, ve
 head(mtcars)
 ```
 
-la función `tail` funciona de manera similar, pero en lugar de devolver la primera parte de un objeto, devuelve la última parte de este, por ejemplo, al ejecutarse la siguiente instrucción
+la función `tail` funciona de manera similar, pero en lugar de devolver la primera parte de un objeto, devuelve la última parte de este, por ejemplo, al ejecutarse la siguiente instrucción:
 
 ```R
 tail(mtcars)
 ```
 
-se devolverán las últimas seis filas del data frame
+se devolverán las últimas seis filas del data frame.
 
 #### Función `View`
 
-La función `View` aplicada a un objeto de `R` como un data frame, invoca un visor de datos al estilo de una hoja de cálculo, por ejemplo
+La función `View` aplicada a un objeto de `R` como un data frame, invoca un visor de datos al estilo de una hoja de cálculo, por ejemplo:
 
 ```R
 View(iris)
@@ -67,7 +67,7 @@ View(iris)
 
 #### Crear funciones: Función que calcula la moda
 
-En `R` también podemos crear nuestras propias funciones, por ejemplo
+En `R` también podemos crear nuestras propias funciones, por ejemplo:
 
 ```R
 moda <- function(vector){
