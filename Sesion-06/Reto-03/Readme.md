@@ -11,7 +11,7 @@
 
 # Desarrollo
 
-Con el conjunto de datos soccer.csv realiza lo siguiente
+Con el conjunto de datos [soccer.csv](https://raw.githubusercontent.com/beduExpert/Programacion-R-Santander-2021/main/Sesion-06/Reto-03/soccer.csv) realiza lo siguiente
 
 1. Crea un data frame para el Barcelona que indique el número de goles anotados en cada fecha que ha jugado.
 
