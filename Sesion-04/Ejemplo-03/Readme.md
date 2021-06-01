@@ -28,7 +28,7 @@ tail(as.data.frame(m2))
 
 estamos interesados en contrastar las hipótesis H<sub>0</sub>: mu1-mu2 = 0 *vs* H<sub>1</sub>: mu1-mu2 diferente de 0 (contraste de dos colas)
 
-El valor observado del estadístico de prueba en este caso está dado por
+El valor observado del estadístico de prueba en este caso está dado por:
 
 ```R
 z0 <- (mean(m1)-mean(m2)-0)/sqrt(var(m1)/56 + var(m2)/63)
@@ -89,7 +89,7 @@ tail(as.data.frame(m2))
 
 estamos interesados en contrastar las hipótesis H<sub>0</sub>: mu1-mu2 = 0 *vs* H<sub>1</sub>: mu1-mu2 diferente de 0 (contraste de dos colas)
 
-El valor observado del estadístico de prueba en este caso está dado por
+El valor observado del estadístico de prueba en este caso está dado por:
 
 ```R
 t0 <- (mean(m1)-mean(m2)-0)/(sqrt((22*var(m1)+19*var(m2))/(23+20-2))*sqrt(1/23+1/20))
