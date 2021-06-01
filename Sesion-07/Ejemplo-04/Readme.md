@@ -87,7 +87,7 @@ head(data_df)
 
 ## Tablas en HTML 
 
-Comenzamos instalando el paquete `rvest` el cual nos permitirá realizar la lectura de la tabla en el HTML
+Comenzamos instalando el paquete `rvest` el cuál, nos permitirá realizar la lectura de la tabla en el HTML
 
 ```R
 install.packages("rvest")
@@ -103,7 +103,7 @@ Selecciona pedazos dentro del HTML para identificar la tabla
 ```R
 tables <- html_nodes(file, "table")  
 ```
-Hay que analizar 'tables' para determinar cual es la posición en la lista que contiene la tabla, en este caso es la no. 4 
+Hay que analizar 'tables' para determinar cuál es la posición en la lista que contiene la tabla, en este caso es la no. 4 
 
 Extraemos la tabla de acuerdo a la posición en la lista
 ```R
