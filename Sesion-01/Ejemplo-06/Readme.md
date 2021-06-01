@@ -6,7 +6,7 @@
 
 # Requisitos
 1. Haber estudiado el prework
-2. 2.	Tener previamente instalados R y RStudio 
+2. Tener previamente instalados R y RStudio 
 
 # Desarrollo
 Durante este ejemplo se darán las bases para inicializar una variable que sea utilizada dentro de un loop, adicionalmente se utilizarán los comandos while, if y if-else para poder aplicarlos adecuadamente.
