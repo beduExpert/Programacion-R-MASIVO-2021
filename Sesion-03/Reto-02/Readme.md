@@ -1,7 +1,5 @@
 # RETO 2. Estadísticos de la NBA
 
-Full players stats from the 2014-2015 season + personal details such as height. weight, etc.
-
 #### Objetivo
 - Generar histogramas
 - Generar gráficos de dispersión
@@ -9,10 +7,13 @@ Full players stats from the 2014-2015 season + personal details such as height. 
 - Hacer Boxplots
 
 #### Requisitos
+- Tener previamente instalados R y Rstudio
 - Manejo de data frames
 - Graficas básicas
 
 #### Desarrollo
+
+Estadísticos completas de los jugadores de las temporadas 2014-2015, contienen datos personales como: altura, peso, entre otras.
 
 1. Generar un histograma de los minuntos totales (`MIN`), de los jugadores y agregar una línea donde se muestre la media (Hint: para agregar la línea que muestre la media consulta la documentación sobre `geom_vline` y el argumento `xintercept`)
 
