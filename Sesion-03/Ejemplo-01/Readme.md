@@ -5,6 +5,8 @@
 - Aprender la sintaxis del paquete ggplot
 
 #### Requisitos
+- Tener previamente instalados R y Rstudio
+- Haber estudiado el prework
 - Haber realizado la lectura y comprensión del prework
 - Manejo de data frames
 - Analizar el código que se va mostrando y tratar de comprender la sintaxis
@@ -20,7 +22,7 @@ Instalamos el paquete (si es necesario) y lo cargamos
 library(ggplot2)
 ```
 
-Primero recordamos cuales son las variables que contiene el dataset
+Primero recordamos cuáles son las variables que contiene el dataset
 ```R
 names(mtcars)
 ``` 
@@ -30,7 +32,7 @@ ggplot(mtcars, aes(x=cyl, y = hp, colour = mpg )) +
   geom_point()  # Tipo de geometría, intenta utilizar alguna otra
 ```
 
-Agregando carácteristicas de tema y facewrap
+Agregando características de tema y facewrap
 ```R
 ggplot(mtcars, aes(x=cyl, y = hp, colour = mpg )) + 
   geom_point() +   
