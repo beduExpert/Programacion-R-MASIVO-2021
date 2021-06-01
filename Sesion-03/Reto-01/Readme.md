@@ -5,14 +5,19 @@
 - Comparar las características de ambas funciones  
 
 #### Requisitos
+- Tener previamente instalados R y Rstudio
 - Manipulación de datos
 - Gráficas y atributos
 
 #### Desarrollo
-Este ejemplo aunque es básico, servirá para realizar una comparación entre las funciones `hist()` y `ggplot`, los dos útiles, comparalos y decide cual es de tu agrado de acuerdo a los requerimientos. 
+Este ejemplo, servirá para realizar una comparación entre las funciones `hist()` y `ggplot`: 
  
  1. Carga el data set `BD_Altura_Alunos.csv` (Hint: Si tienes algún inconveniente con los datos, lee sobre el argumento `sep` de la función `read.csv`)
  2. Realiza el histograma con la función `hist()`, nativa de R
  3. Ahora realiza el histograma con la función `ggplot`. (Recuerda que debes instalar el paquete `ggplot2`)
  
- Reflexiona sobre el ejercicio y saca tus conclusiones sobre cuál es el método que más te convence.  
+ Reflexiona sobre el ejercicio y contesta:
+ 
+- ¿Cuál es la diferencia entre hist () y ggplot?
+- ¿Cuál te parece más útil y por qué?
+
