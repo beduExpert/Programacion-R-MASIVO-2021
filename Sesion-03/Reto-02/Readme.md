@@ -19,7 +19,7 @@ El archivo _players_stats.csv_, cotiene estadísticas completas de los jugadores
 
 2. Generar un histograma de edad (`Age`) y agregar una línea con la media
 
-3. Hacer un scatterplot de las variables `Weight` y  `Height` y observar la correlacón que existe entre ambas variables (1 sola gráfica)
+3. Hacer un scatterplot de las variables `Weight` y  `Height` y observar la correlación que existe entre ambas variables (1 sola gráfica)
 
 4. Utiliza la función `which.max` para saber quién es el jugador más alto, una vez hecho esto, presenta los resultados en una leyenda que diga "El jugador más alto es: `Name`, con una altura de: `Height`". Las unidades de altura deben ser en metros.
 
