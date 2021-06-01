@@ -14,7 +14,7 @@
 
 #### DESARROLLO
 
-En el archivo de datos csv adjunto se encuentran observaciones correspondientes a dos clases diferentes indicadas por la variable `y`. Únicamente hay dos variables predictoras o características. A continuación realice los siguientes requerimientos (Hint: transforme primero la variable de respuesta `y` a variable categórica con las funciones `mutate` y `factor`):
+En el archivo de datos _datosclases.csv_, adjunto se encuentran observaciones correspondientes a dos clases diferentes indicadas por la variable `y`. Únicamente hay dos variables predictoras o características. A continuación realice los siguientes requerimientos (Hint: transforme primero la variable de respuesta `y` a variable categórica con las funciones `mutate` y `factor`):
 
 1. Carga los paquetes `ggplot2` y `e1071`; observe algunas características del data frame con las funciones `tail` y `dim`. Obtenga el gráfico de dispersión de los datos diferenciando las dos clases.
 
