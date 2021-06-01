@@ -6,6 +6,7 @@
 - Variantes de scatter plots
 
 #### Requisitos
+- Tener previamente instalados R y Rstudio
 - Tener conceptos básicos de gráficación 
 - Haber realizado el prework
 
@@ -39,9 +40,9 @@ Se puede agregar la opción _facet_wrap()_ con la variable `cyl`, para divirir l
 ```R
 my_scatplot + facet_wrap("cyl")
 ```
-De igual manera que el _facet_wrap_ se puede dividir por tipo de transmisión utilizando la opción _facet_grid_ (am =	Transmission (0 = automatic, 1 = manual))
+Al igual que el _facet_wrap_ se puede dividir por tipo de transmisión utilizando la opción _facet_grid_ (am =	Transmission (0 = automatic, 1 = manual))
 ```R
 my_scatplot + facet_grid(am~cyl)
 ```
 
-Como puedes observar, hay muchas formas de representar el gráfico de dispersión, éstas son algunas de ellas, obviamente existen muchas más. 
+Como puedes observar, hay muchas formas de representar el gráfico de dispersión, éstas solo son algunas de ellas. 
