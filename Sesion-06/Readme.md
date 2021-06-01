@@ -1,4 +1,4 @@
-# Sesion 6. Series de tiempo.
+# Sesión 6. Series de tiempo.
 
 ## :dart: Objetivos
 
@@ -10,7 +10,7 @@ En esta sesión estudiaremos temas relacionados con los siguientes puntos:
 
 - Datos que provienen de una variable que es medida secuencialmente en el tiempo durante o en un intervalo fijo (series de tiempo)
 - Análisis de series de tiempo y ajustes de modelos para entender el pasado y predecir el futuro
-- 
+
 ## 📂 Organización de la clase
 
 - [Ejemplo 1](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-06/Ejemplo-01) Ejemplos de series de tiempo y técnicas descriptivas
