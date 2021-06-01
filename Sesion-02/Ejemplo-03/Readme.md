@@ -3,7 +3,7 @@
 #### Objetivo
 
 - Tener una herramienta para identificar filas con valores perdidos (NA)
-- Filtrar filas sin valores perdidos cuando estas se hallan identificados
+- Filtrar filas sin valores perdidos, cuando estas se hallan identificado
 
 #### Requisitos
 
@@ -31,7 +31,7 @@ observamos la dimensión
 dim(airquality)
 ```
 
-Con la función `complete.cases` podemos averiguar cuales son aquellas filas que no contienen ningún valor perdido (`NA`) y cuales son aquellas filas que tienen al menos un valor perdido.
+Con la función `complete.cases` podemos averiguar cuáles son aquellas filas que no contienen ningún valor perdido (`NA`) y cuáles son aquellas filas que tienen al menos un valor perdido.
 
 ```R
 bien <- complete.cases(airquality)
@@ -39,13 +39,13 @@ bien <- complete.cases(airquality)
 
 La variable `bien`, es un vector lógico con `TRUE` en las posiciones que representan filas de `airquality` en donde no hay `NA's` y con `FALSE` en las posiciones que representan aquellas filas de `airquality` en donde se encontraron `NA's`
 
-Por tanto, podemos contar el número de filas en donde no hay `NA´s` de la siguiente manera
+Por tanto, podemos contar el número de filas en donde no hay `NA´s` de la siguiente manera:
 
 ```R
 sum(bien)
 ```
 
-Podemos filtrar aquellas filas sin `NA's` de la siguiente manera
+Podemos filtrar aquellas filas sin `NA's` como se muestra a continuación:
 
 ```R
 airquality[bien,]
