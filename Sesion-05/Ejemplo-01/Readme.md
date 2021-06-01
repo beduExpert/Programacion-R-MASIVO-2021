@@ -11,9 +11,9 @@
 
 #### Desarrollo
 
-Supongamos que queremos emprender un negocio o que se nos colicita un estudio en en cual se requiere predecir el precio de cena (platillo), para poder estar dentro de los rangos de precios del mercado y que el restaurante sea rentable. 
+Supongamos que queremos emprender un negocio o que se nos solicita un estudio en en cual se requiere predecir el precio de cena (platillo), para poder estar dentro de los rangos de precios del mercado y que el restaurante sea rentable. 
 
-Entonces primero vamos a analizar los datos de encuestas de clientes de 168 restaurantes Italianos en el área deseada que están disponibles, los cuales tienen las siguientes variables de estudio:
+Entonces primero vamos a analizar los datos de encuestas de clientes de 168 restaurantes italianos en el área deseada que están disponibles, los cuales tienen las siguientes variables de estudio:
 
 - Y: Price (Precio): el precio (en USD) de la cena
 - X1: Food: Valuación del cliente de la comida (sacado de 30)
@@ -35,7 +35,7 @@ dim(nyc)
 attach(nyc)
 ```
 
-Acontinuación mostramos una matriz de gráficos de dispersión de los tres predictores continuos y la variable de respuesta. 
+A continuación mostramos una matriz de gráficos de dispersión de los tres predictores continuos y la variable de respuesta. 
 
 ```R
 pairs(~ Price + Food + Decor + Service, data = nyc, gap = 0.4, cex.labels = 1.5)
@@ -76,14 +76,14 @@ summary(m2)
 
 #### Análisis de covarianza
 
-Para investigar si el efecto de los predictores depende de la variable dummy East consideraremos el siguiente modelo el cual es una extensión a más de una variable predictora del modelo de rectas de regresión no relacionadas Y = beta0 + beta1*Food + beta2*Decor +  beta3*Service + beta4*East + beta5*Food*East + beta6*Decor*East + beta7*Service*East + e (Completo)
+Para investigar si el efecto de los predictores depende de la variable dummy East consideraremos el siguiente modelo, el cuál, es una extensión a más de una variable predictora del modelo de rectas de regresión no relacionadas Y = beta0 + beta1*Food + beta2*Decor +  beta3*Service + beta4*East + beta5*Food*East + beta6*Decor*East + beta7*Service*East + e (Completo)
 
 ```R
 mfull <- lm(Price ~ Food + Decor + Service + East + 
               Food:East + Decor:East + Service:East)
 ```
 
-Note como ninguno de los coeficientes de regresión para los términos de interacción son estadísticamente significativos
+Nota: Como ninguno de los coeficientes de regresión para los términos de interacción son estadísticamente significativos
 
 ```R
 summary(mfull)
@@ -134,13 +134,13 @@ plot(m2$fitted.values, Price, xlab = "Valores ajustados", ylab = "Price")
 abline(lsfit(m2$fitted.values, Price))
 ```
 
-Acontinuación mostramos una matriz de gráficos de dispersión de los dos predictores continuos. Los predictores parecen estar linealmente relacionados al menos aproximadamente
+A continuación mostramos una matriz de gráficos de dispersión de los dos predictores continuos. Los predictores parecen estar linealmente relacionados al menos aproximadamente
 
 ```R
 pairs(~ Food + Decor, data = nyc, gap = 0.4, cex.labels = 1.5)
 ```
 
-Acontinuación veremos gráficas de residuales estandarizados contra cada predictor. La naturaleza aleatoria de estas gráficas es un indicativo de que el modelo ajustado es un modelo válido para los datos.
+A continuación veremos gráficas de residuales estandarizados contra cada predictor. La naturaleza aleatoria de estas gráficas es un indicativo de que el modelo ajustado es un modelo válido para los datos.
 
 ```R
 StanRes2 <- rstandard(m2)
