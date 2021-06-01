@@ -4,8 +4,8 @@
 Desarrollar un dashboard de tipo dinámico, utilizando la librería `shinydashboard`; en este caso tu eliges cual es el conjunto de datos a mostrar y las características que quieras añadir, así como las pestañas e íconos que quieras para representar las pestañas o etiquetas. 
 
 #### Requisitos
-- shiny
-- shinydashboard
+- libreria Shiny
+- libreria Shinydashboard
 - Creatividad
 
 #### Desarrollo 
