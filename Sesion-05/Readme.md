@@ -15,6 +15,6 @@ En esta sesión estudiaremos temas relacionados con los siguientes puntos
 ## 📂 Organización de la clase
 
 - [Ejemplo 1](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-05/Ejemplo-01) Regresión lineal múltiple
-   - [Reto 1:](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-05/Reto-01) Regresión lineal múltiple
+   - [Reto 1:](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-05/Reto-01) Regresión lineal múltiple (Ventas y presupuestos de publicidad)
 - [Ejemplo 2](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-05/Ejemplo-02) Máquinas de vectores de soporte (Compañía de tarjetas de crédito)
-   - [Reto 2:](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-05/Reto-02) Máquinas de vectores de soporte (Compañía de tarjetas de crédito)
+   - [Reto 2:](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-05/Reto-02) Máquinas de vectores de soporte
