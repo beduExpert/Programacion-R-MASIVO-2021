@@ -101,4 +101,4 @@ Tu resultado debería ser como la siguiente imagen
 <img src="imagenes/1.5.png" width="650" height="450"> 
 </p>
 
-Ejecuta la webApp y observa el resultado que se generó con el código, ¿Qué otros escenarios se te ocurren?
+Ejecuta la webApp y observa el resultado que se generó con el código, ¿qué otros escenarios se te ocurren?
