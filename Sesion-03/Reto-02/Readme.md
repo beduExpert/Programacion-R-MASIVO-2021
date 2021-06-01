@@ -13,7 +13,7 @@
 
 #### Desarrollo
 
-Estadísticos completas de los jugadores de las temporadas 2014-2015, contienen datos personales como: altura, peso, entre otras.
+El archivo _players_stats.csv_, cotiene estadísticas completas de los jugadores de las temporadas 2014-2015, contienen datos personales como: altura, peso, entre otras, utiliza fichero para:
 
 1. Generar un histograma de los minuntos totales (`MIN`), de los jugadores y agregar una línea donde se muestre la media (Hint: para agregar la línea que muestre la media consulta la documentación sobre `geom_vline` y el argumento `xintercept`)
 
