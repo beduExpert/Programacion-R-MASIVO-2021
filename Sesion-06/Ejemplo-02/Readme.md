@@ -54,7 +54,7 @@ title(main = "Correlograma para la caminata aleatoria simulada",
       sub = expression(x[t]==x[t-1]+w[t]))
 ```
 
-Modelos ajustados y gráficas de diágnostico, series de caminatas aleatorias simuladas. El correlograma de las series de diferencias puede usarse para evaluar si una serie dada puede modelarse como una caminata aleatoria
+Modelos ajustados y gráficas de diagnóstico, series de caminatas aleatorias simuladas. El correlograma de las series de diferencias puede usarse para evaluar si una serie dada puede modelarse como una caminata aleatoria.
 
 ```R
 acf(diff(x), main = "")
