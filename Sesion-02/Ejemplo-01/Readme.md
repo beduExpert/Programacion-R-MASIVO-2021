@@ -1,20 +1,20 @@
 # EJEMPLO 1. Medidas de tendencia central, de posición y de dispersión
 
-#### Objetivo
+#### Objetivo:
 
-- Aprender a calcular medidas de tendencia central, de posición y de dispersión para conjuntos de datos, con ayuda de funciones de `R`.
+- Aprender a calcular medidas de tendencia central, de posición y de dispersión para conjuntos de datos, con ayuda de funciones de `R`
 - Interpretar los resultados obtenidos
 
 #### Requisitos
 
 - Tener previamente instalados R y RStudio
-- Haber leido y comprendido el Prework
+- Haber leído y comprendido el Prework
 
 #### Desarrollo
 
 #### Medidas de tendencia central
 
-En `R` utilizamos la función `mean` para calcular la media de un conjunto de mediciones, por ejemplo
+En `R` utilizamos la función `mean` para calcular la media de un conjunto de mediciones, por ejemplo:
 
 ```R
 x = c(4000, 9000, 9000, 10000); mean(x)
@@ -48,7 +48,7 @@ quantile(x, seq(0.1,0.9, by = 0.1)) # Deciles
 ```
 #### Medidas de dispersión
 
-Podemos calcular el rango intercuartílico en `R` con la función `IQR`, por ejemplo
+Podemos calcular el rango intercuartílico en `R` con la función `IQR`, por ejemplo:
 
 ```R
 IQR(x)
