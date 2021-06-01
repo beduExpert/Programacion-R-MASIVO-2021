@@ -5,8 +5,8 @@
 - Cargar paquetes
 
 # Requisitos
-1. R y RStudio
-2. Prework 
+1. Haber estudiado Prework
+2. Tener previamente instalados R y RStudio
 
 # Desarrollo
 En este ejemplo se te guiará para poder realizar la instalación y carga de paquetes que son requeridos para realizar análisis, gráficas, o para extraer información con diversas funciones. Esto es útil ya que agrega funcionalidades a R, ya sea para graficar o generar análisis con diversas técnicas.
@@ -40,4 +40,4 @@ library(installr)
 updateR()
 ```
 
-También se puede realizar esta acción en la pestaña de Packages, intentalo.
+También se puede realizar esta acción en la pestaña de Packages, inténtalo.
