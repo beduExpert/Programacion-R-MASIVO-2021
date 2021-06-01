@@ -1,16 +1,18 @@
 
-# Sesion 5: Regresión lineal y clasificación.
+# Sesión 5: Regresión lineal y clasificación.
 
 ## :dart: Objetivos
 
-Realizar predicciones de una variable cuantitativa con base en variables predictoras, entender como una variable de respuesta está relacionada con varias variables explicativas. Realizar clasificaciones con base en variables predictoras también llamadas características.
+- Realizar predicciones de una variable cuantitativa con base en variables predictoras.
+- Entender como una variable de respuesta está relacionada con varias variables explicativas. 
+- Realizar clasificaciones con base en variables predictoras también llamadas características.
 
 ## 🤓 ¿Que aprenderán? 
 
-En esta sesión estudiaremos temas relacionados con los siguientes puntos
+En esta sesión estudiaremos temas relacionados con los siguientes puntos:
 
-- Predicción de una variable cuantitativa a partir de otras variables predictoras cuando es posible soportar algunas suposiciones
-- Clasificación en categorías de un conjunto de objetos o personas
+- Predicción de una variable cuantitativa a partir de otras variables predictoras cuando es posible soportar algunas suposiciones.
+- Clasificación en categorías de un conjunto de objetos o personas.
 
 ## 📂 Organización de la clase
 
