@@ -5,11 +5,12 @@
 - Introducción a la distribución de los datos
 
 #### Requisitos
+- Tener previamente instalados R y Rstudio
 - Lectura de ficheros CVS
 - Nociones básicas de ggplot
 
 #### Desarrollo
-Comenzamos leyendo un fichero, el cual contiene información sobre dos grupos de control G1 y G2, a los cuales se les realizó  a cada uno una medición en 3 momentos diferentes C1, C2 y C3
+Comenzamos leyendo un fichero. Este, contiene información sobre dos grupos de control G1 y G2, a los cuales, se les realizó una medición en 3 momentos diferentes C1, C2 y C3
 
 ```R
 # library(dplyr) # para usar mutate
@@ -35,7 +36,7 @@ data <- mutate(data, Categoria = factor(Categoria), Grupo = factor(Grupo))
 str(data) 
 ```
 
-Ahora realizamos el boxplot para observar como se distribuyen los datos por grupo y categoría.
+Ahora realizamos el boxplot para observar cómo se distribuyen los datos por grupo y categoría.
 ```R
 ggplot(data, aes(x = Categoria, y = Mediciones, fill = Grupo)) + geom_boxplot() +
   ggtitle("Boxplots") +
