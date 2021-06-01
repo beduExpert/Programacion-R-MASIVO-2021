@@ -2,11 +2,12 @@
 
 ## :dart: Objetivos
 
-Estudiar algunas distribuciones de probabilidad muy comunes y útiles. Llevar a cabo contrastes de hipótesis que ayuden a tomar decisiones.
+- Estudiar algunas distribuciones de probabilidad muy comunes y útiles dentro del análisis de los datos. 
+- Llevar a cabo contrastes de hipótesis que ayuden a tomar decisiones.
 
 ## 🤓 ¿Que aprenderán? 
 
-En esta sesión estudiaremos temas relacionados con los siguientes puntos
+En esta sesión estudiaremos temas relacionados con los siguientes puntos:
 
 - Cálculo de probabilidades y cuantiles de las distribuciones binomial, normal y t de Student
 - Generación de muestras aleatorias de las distribuciones estudiadas
