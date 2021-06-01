@@ -86,3 +86,7 @@ head(pop50.mex)
 
 unique(DataDB$CountryCode)   # Países que contiene la BDD
 ```
+Por último nos desconectamos de la BDD
+```R
+dbDisconnect(MyDataBase)
+``` 
