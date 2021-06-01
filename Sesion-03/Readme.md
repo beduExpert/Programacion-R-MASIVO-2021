@@ -1,14 +1,14 @@
-# Sesion 03:  Análisis Exploratorio de Datos (AED o EDA) con R
+# Sesión 03:  Análisis Exploratorio de Datos (AED o EDA) con R
 
 ## :dart: Objetivos
 
-Lograr un mejor conocimiento o entendimiento del problema con el cual se relacionan los datos, de una manera relativamente fácil y rápida, sin utilizar modelos o teoría matemática avanzada
+Entender de forma fácil y rápida el problema con el que se relacionan los datos sin la necesidad de utilizar modelos o teoría de matemáticas avanzada.
 
 ## 🤓 ¿Que aprenderán? 
 
-Durante el transcurso de esta sesión serás capaz de desarrollar las siguientes capacidades de R 
+Durante el transcurso de esta sesión serás capaz de desarrollar las siguientes capacidades de R:
 
-Conocer mejor el conjunto de datos con el que se esté trabajando, 
+- Conocer mejor el conjunto de datos con el que se esté trabajando, 
 - Llevar a cabo visualizaciones
 - Plantear hipótesis 
 - Formular preguntas relevantes.  
