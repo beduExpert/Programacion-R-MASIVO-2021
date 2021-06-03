@@ -63,7 +63,7 @@ dim(mydf)
 ```
 Podemos agregar una columna extra con datos 
 ```RR
-mydf$sexo <-c("H", "M", "H", "M", "H", "H", "M", "H","H","M", "M")
+mydf$sexo <- c("H", "M", "H", "M", "H", "H", "M", "H","H","M", "M", "H")
 mydf
 summary(mydf)
 ```
