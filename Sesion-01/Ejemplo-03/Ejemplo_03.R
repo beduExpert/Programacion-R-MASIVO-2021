@@ -63,7 +63,6 @@ dim(mydf)
 mydf$sexo <- c("H", "M", "H", "M", "H", "H", "M", "H","H","M", "M", "H")
 mydf
 
-
 # Si fuera el caso, se puede eliminar una columna
 
 (mydf$sexo <- NULL)
