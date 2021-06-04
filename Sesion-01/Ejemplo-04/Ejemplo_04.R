@@ -33,12 +33,6 @@ amazon.books <- read.csv("bestsellers with categories.csv")
 str(amazon.books) 
 head(amazon.books); tail(amazon.books) 
 
-# También se puede leer el fichero directamente desde una URL
-
-data.url <- read.csv("https://www.football-data.co.uk/mmz4281/2021/SP1.csv")
-str(data.url)
-head(data.url); tail(data.url) 
-
 # Calculamos la dimensión de la base de datos
 
 dim(amazon.books)
@@ -46,3 +40,9 @@ dim(amazon.books)
 # El tipo de objeto se puede saber utilizando class()
 
 class(amazon.books)
+
+# También se puede leer el fichero directamente desde una URL
+
+data.url <- read.csv("https://www.football-data.co.uk/mmz4281/2021/SP1.csv")
+str(data.url)
+head(data.url); tail(data.url) 
