@@ -26,7 +26,7 @@ Ahora graficaremos probabilidades (estimadas) marginales y conjuntas para el nú
 
 2. Realiza lo siguiente:
 
-- Un gráfico de barras para las probabilidades marginales estimadas del número de goles que anota el equipo de casa
+- Un gráfico de barras para las probabilidades marginales estimadas del número de goles que anota el equipo de casa.
 - Un gráfico de barras para las probabilidades marginales estimadas del número de goles que anota el equipo visitante.
 - Un HeatMap para las probabilidades conjuntas estimadas de los números de goles que anotan el equipo de casa y el equipo visitante en un partido.
 
