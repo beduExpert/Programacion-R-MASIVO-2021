@@ -1,4 +1,4 @@
-# Sesion 4: Algunas distribuciones, teorema central del límite y contraste de hipótesis
+# Sesión 4: Algunas distribuciones, teorema central del límite y contraste de hipótesis
 
 ## :dart: Objetivos
 
