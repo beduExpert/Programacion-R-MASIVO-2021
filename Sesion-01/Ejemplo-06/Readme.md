@@ -11,21 +11,19 @@
 # Desarrollo
 Durante este ejemplo se darán las bases para inicializar una variable que sea utilizada dentro de un loop, adicionalmente se utilizarán los comandos while, if y if-else para poder aplicarlos adecuadamente.
 
-Este ejemplo elevará al cuadrado las primeras 10 entradas de un vector generado aleatóriamente de 20 entradas 
-```R
-w <- rnorm(20)              
-print("Este loop calcula el cuadrado de los 10 primeros elementos del vector w")
-```
-inicializando la varialbe `wsq`
-```R
-w.sq <- 0
+# Este ejemplo se elevarán al cuadrado las entradas de un vector cualquiera w
 
-for(i in 1:10) {
-  # i-th element of `u1` squared into `i`-th position of `usq`
-  w.sq[i] <- w[i]**2
-  print(w.sq[i])
+```R
+w <- c(2,4,6,8,10)
+
+print("Este loop calcula el cuadrado de los elementos del vector w")
+
+for(i in 1:length(w) ) {
+  w.sq <- w[i]**2
+  print(w.sq)
 }
 ```
+
 Los bucles WHILE comienzan comprobando una condición. Si esta es verdadera, entonces se entra al cuerpo del bucle. Una vez completada una ejecución de este bloque, se comprueba la condición nuevamente y así sucesivamente hasta que la comprobación de la condición de falso.
 
 ```
