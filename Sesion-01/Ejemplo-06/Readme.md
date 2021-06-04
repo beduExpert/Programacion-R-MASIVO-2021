@@ -9,9 +9,9 @@
 2. Tener previamente instalados R y RStudio 
 
 # Desarrollo
-Durante este ejemplo se darán las bases para inicializar una variable que sea utilizada dentro de un loop, adicionalmente se utilizarán los comandos while, if y if-else para poder aplicarlos adecuadamente.
+Durante este ejemplo se darán las bases para generar un loop _for_, adicionalmente se utilizarán los comandos _while_, _if_ y _if-else_ para poder aplicarlos adecuadamente.
 
-# Este ejemplo se elevarán al cuadrado las entradas de un vector cualquiera w
+Este ejemplo se elevarán al cuadrado las entradas de un vector cualquiera w
 
 ```R
 w <- c(2,4,6,8,10)
