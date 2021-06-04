@@ -17,7 +17,7 @@ Ahora vamos a generar un cúmulo de datos mayor al que se tenía, esta es una si
 
 1. Importa los datos de soccer de las temporadas 2017/2018, 2018/2019 y 2019/2020 de la primera división de la liga española a `R`, los datos los puedes encontrar en el siguiente enlace: https://www.football-data.co.uk/spainm.php
 
-2. Obten una mejor idea de las características de los data frames al usar las funciones: `str`, `head`, `View` y `summary`
+2. Revisa la estructura de de los data frames al usar las funciones: `str`, `head`, `View` y `summary`
 
 3. Con la función `select` del paquete `dplyr` selecciona únicamente las columnas `Date`, `HomeTeam`, `AwayTeam`, `FTHG`, `FTAG` y `FTR`; esto para cada uno de los data frames. (Hint: también puedes usar `lapply`).
 
