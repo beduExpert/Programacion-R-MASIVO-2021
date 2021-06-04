@@ -14,10 +14,10 @@
 Paquetes de R utilizados
 
 ```R
-suppressMessages(suppressWarnings(library(dplyr)))
-suppressMessages(suppressWarnings(library(e1071)))
-suppressMessages(suppressWarnings(library(ggplot2)))
-suppressMessages(suppressWarnings(library(ISLR)))
+library(dplyr)
+library(e1071)
+library(ggplot2)
+library(ISLR)
 ```
 
 1. Observemos algunas características del data frame Default del paquete ISLR, con funciones tales como head, tail, dim y str.
