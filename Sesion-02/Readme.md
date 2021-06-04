@@ -1,4 +1,4 @@
-# Sesion 2. Programación y manipulación de datos en R
+# Sesión 2. Programación y manipulación de datos en R
 
 ## :dart: Objetivos:
 
