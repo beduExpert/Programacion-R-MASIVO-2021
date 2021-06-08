@@ -1,4 +1,4 @@
-# Ejemplo 2. Función `View` y funciones
+# Ejemplo 2. Función _View_ y cómo crear una función
 
 #### Objetivo
 
