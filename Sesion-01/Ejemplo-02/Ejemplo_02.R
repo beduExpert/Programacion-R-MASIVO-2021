@@ -48,12 +48,6 @@ n[n > 4]
 
 which(n > 4)
 
-# Uniendo Vectores para formar una matriz
-
-a <- 2:6
-b <- 5:9
-
-
 # Algunas operaciones básicas de matrices
 
 # Producto matricial: A %*% B
