@@ -54,12 +54,6 @@ Ahora veremos como localizar la posición de las entradas anteriores
 which(n > 4)
 ```
 
-Uniendo vectores para formar una matriz
-```R
-a <- 2:6
-b <- 5:9
-```
-
 Algunas operaciones básicas de matrices que puede intentar son: 
    -  Producto matricial: A %*% B
    -  Producto elemento a elemento: A*B
