@@ -12,19 +12,6 @@
 
 #### Desarrollo
 
-#### Función `summary`
-
-La función `summary` es una función genérica usada para obtener resumenes de diferentes objetos de `R`, sin embarbo también es útil para obtener resumenes de los resultados de diferentes ajustes a modelos, por ejemplo:
-
-```R
-set.seed(57)
-x <- rnorm(35)
-e <- rnorm(35)
-y <- 5 + 2*x + e
-modelo <- lm(y~x)
-summary(modelo)
-```
-
 #### Función `View`
 
 La función `View` aplicada a un objeto de `R` como un data frame, invoca un visor de datos al estilo de una hoja de cálculo, por ejemplo:
