@@ -21,7 +21,7 @@ En esta sesión estudiaremos temas relacionados con los siguientes puntos
 - [Ejemplo 1](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-02/Ejemplo-01) Medidas de tendencia central, de posición y de dispersión
    - [Reto 1](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-02/Reto-01) Medidas de tendencia central
 
-- [Ejemplo 2](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-02/Ejemplo-02) Características de los objetos (`str`, `summary`, `head` y `View`) y funciones
+- [Ejemplo 2](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-02/Ejemplo-02) Función `View` y funciones
    - [Reto 2](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-02/Reto-02) Características de los objetos y funciones
 
 - [Ejemplo 3](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/master/Sesion-02/Ejemplo-03) Funciones `na.omit` y `complete.cases`
