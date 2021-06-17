@@ -1,4 +1,4 @@
-# Reto 2. Características de los objetos y funciones
+# Reto 2. Función mediana
 
 #### Objetivo
 
@@ -10,14 +10,7 @@
 
 #### Desarrollo
 
-1. Considere el data frame `mtcars` de `R` y utilice las funciones: 
-- `str`
-- `summary`
-- `head` 
-- `View` 
 
-para observar las características del objeto y tener una mayor comprensión de este.
-
-2. Crea una función que calcule la mediana para datos no agrupados de un conjuntos de valores, sin utilizar la función `median`
+1. Crea una función que calcule la mediana para datos no agrupados de un conjuntos de valores, sin utilizar la función `median`
 
 _ref (https://es.wikipedia.org/wiki/Mediana_(estad%C3%ADstica))_
