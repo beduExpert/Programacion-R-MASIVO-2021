@@ -4,7 +4,7 @@
 
 library(dplyr)
 library(e1071)
-ggplot2)
+library(ggplot2)
 library(ISLR)
 
 # 1. Observemos algunas características del data frame Default del paquete ISLR, con funciones tales como head, tail, dim y str.
