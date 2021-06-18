@@ -1,16 +1,6 @@
 # 2.1 Características de los objetos (str sobre df, summary, head y view) y funciones
 
-# Función summary
 
-# La función summary es una función genérica usada para obtener resumenes sin embargo, también es útil para obtener resumenes de los resultados de diferentes
-# ajustes a modelos
-
-set.seed(57)
-x <- rnorm(35)
-e <- rnorm(35)
-y <- 5 + 2*x + e
-modelo <- lm(y~x)
-summary(modelo)
 
 View(iris)
 
