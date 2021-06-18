@@ -1,6 +1,6 @@
 # 2.1 Características de los objetos (str sobre df, summary, head y view) y funciones
 
-
+# La función `View` aplicada a un objeto de `R` como un data frame, invoca un visor de datos al estilo de una hoja de cálculo, por ejemplo:
 
 View(iris)
 
