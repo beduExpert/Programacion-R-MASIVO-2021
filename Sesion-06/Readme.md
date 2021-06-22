@@ -1,4 +1,4 @@
-# Sesión 6.  Modelos estocásticos básicos y modelos estacionarios.
+# Sesión 6.  Series de tiempo.
 
 ## :dart: Objetivos
 
