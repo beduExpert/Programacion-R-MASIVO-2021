@@ -1,4 +1,4 @@
-# Ejemplo 2. Modelos estocásticos básicos y modelos estacionarios.
+# Ejemplo 2. Modelos estocásticos básicos, modelos estacionarios y predicción.
 
 #### Objetivo
 
