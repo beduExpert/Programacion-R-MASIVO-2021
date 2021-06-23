@@ -4,7 +4,7 @@
 - Generar histogramas
 - Generar gráficos de dispersión
 - Identificar datos relevantes 
-- Hacer Boxplots
+
 
 #### Requisitos
 - Tener previamente instalados R y Rstudio
