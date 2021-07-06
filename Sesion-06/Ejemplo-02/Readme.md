@@ -224,7 +224,7 @@ x.ma
 
 **Modelos ARMA(p, q)**
 
-Simulación y ajuste
+Simulación y ajuste: ARMA(1, 1)
 
 ```R
 set.seed(1)
