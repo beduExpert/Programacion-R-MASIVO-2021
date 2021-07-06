@@ -205,7 +205,7 @@ x.ma
 # Modelos ARMA(p, q)
 
 
-# Simulación y Ajuste
+# Simulación y Ajuste: ARMA(1, 1)
 
 set.seed(1)
 x <- arima.sim(n = 10000, list(ar = -0.6, ma = 0.5))
