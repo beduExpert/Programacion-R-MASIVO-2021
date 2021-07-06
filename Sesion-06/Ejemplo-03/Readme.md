@@ -26,6 +26,7 @@ title(main = "Serie de Producción de Electricidad Australiana",
       xlab = "Tiempo")
 ```
 
+Utilizando la serie de diferencias, convertimos la serie a una estacionaria en la media
 ```R
 plot(diff(Elec.ts), xlab = "", ylab = "")
 title(main = "Serie Diferenciada de Producción de Electricidad Australiana",
@@ -33,6 +34,7 @@ title(main = "Serie Diferenciada de Producción de Electricidad Australiana",
       sub = "Gráfica de la serie diferenciada de primer órden")
 ```
 
+Con el logaritmo, estabilizamos la serie para tener una varianza constante
 ```R
 plot(diff(log(Elec.ts)), xlab = "", ylab = "")
 title(main = "Serie de log dif de Producción de Electricidad Australiana",
@@ -40,7 +42,7 @@ title(main = "Serie de log dif de Producción de Electricidad Australiana",
       sub = "Gráfica de la serie log-transformada diferenciada de primer órden")
 ```
 
-Simulación y ajuste
+Una vez hecha estas transformaciones realizamos la simulación y ajuste.
 
 A continuación, simulamos datos de un modelo ARIMA(1, 1, 1) y luego ajustamos un modelo a la serie simulada para recuperar los parámetros estimados.
 
