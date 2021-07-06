@@ -210,6 +210,7 @@ x.ma
 set.seed(1)
 x <- arima.sim(n = 10000, list(ar = -0.6, ma = 0.5))
 
+#Graficamos sólo 100 datos
 plot(x[1:100], type = "l", xlab = "")
 title(main = "Serie simulada", xlab = "Tiempo", 
       sub = expression(x[t] == -0.6*x[t-1] + w[t] + 0.5*w[t-1]))
