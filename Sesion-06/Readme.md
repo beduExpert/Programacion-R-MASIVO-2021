@@ -19,8 +19,9 @@ En esta sesión estudiaremos temas relacionados con los siguientes puntos:
 - [Ejemplo 3](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-06/Ejemplo-03) Modelos no estacionarios y predicción
    - [Reto 2](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-06/Reto-02) Proceso ARIMA(1, 1, 1)
 
-Opcional
-- [Reto 3](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-06/Reto-03) Gráfica de series de tiempo
+Opcional: - [Reto 3](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-06/Reto-03) Gráfica de series de tiempo
+
+## Postwork
 -  [Postwork](https://github.com/beduExpert/Programacion-R-Santander-2021/tree/main/Sesion-06/Postwork)
 
 
