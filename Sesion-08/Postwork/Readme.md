@@ -22,7 +22,7 @@ Para este postwork genera un dashboard en un solo archivo `app.R`, para esto rea
 
 - Crea un dashboard donde se muestren los resultados con 4 pestañas:
    
-- Una con las gráficas de barras, donde en el eje de las x se muestren los goles de local y visitante con un menu de selección, con una geometría de tipo barras además de hacer un facet_wrap con el equipo visitante
+- Una pestaña con gráficas de barras, donde en el eje de las _X_ se muestren los goles de local y visitante, con un menu de selección (en _choices_ deben aparecer éstas variables), utiliza la geometría de tipo _barras_, además de hacer un facet_wrap con la variable de el _equipo visitante_
    
 - Realiza una pestaña donde agregues las imágenes de las gráficas del postwork 3
     
