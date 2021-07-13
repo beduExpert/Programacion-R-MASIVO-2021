@@ -28,7 +28,7 @@ Para este postwork genera un dashboard en un solo archivo `app.R`, para esto rea
     
 - En otra pestaña coloca el data table del fichero `match.data.csv` 
     
-- Por último en otra pestaña agrega las imágenes de las gráficas de los factores de ganancia mínimo y máximo
+- Por último en otra pestaña agrega las imágenes de las gráficas de los factores de ganancia promedio y máximo
 
 Nota: recuerda que si tienes problemas con el codificado guarda tu archivo `app.R` con la codificación `UTF-8`
 
