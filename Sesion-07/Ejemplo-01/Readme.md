@@ -20,7 +20,6 @@ Dentro de esta sesión podrás realizar una interacción entre RStudio y Github,
 - Ahora vamos agregar un token de Github a RStudio CLoud para vincularlos, siguiendo las siguientes instrucciones: 
 
 [![](token.png)](https://www.loom.com/share/4e05a8daf0b54bfca842eb22fbe6f781)
-
 Una vez agregado el token se puede verificar directamente en el repositorio de *Github* que se realizó la carga de tu archivo, intentalo.
 
 - En caso contrario, para hacer el `pull`, mandar archivos desde Github hacía RStudio se hará de la siguiente manera:
