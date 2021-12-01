@@ -21,7 +21,7 @@ Dentro de esta sesión podrás realizar una interacción entre RStudio y Github,
 
 [![](token.png)](https://www.loom.com/share/4e05a8daf0b54bfca842eb22fbe6f781)
 
-Para realiar la carga del _token_ en R se hace lo siguiente: 
+Para realizar la carga del _token_ en R se hace lo siguiente: 
 
 ```R
 library(gitcreds)
