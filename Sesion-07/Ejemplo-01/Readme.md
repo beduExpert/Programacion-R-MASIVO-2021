@@ -23,12 +23,14 @@ Dentro de esta sesión podrás realizar una interacción entre RStudio y Github,
 
 Para realiar la carga del _token_ en R se hace lo siguiente: 
 
+´´´R
 library(gitcreds)
 install.packages("gitcreds")
-gitcreds_set()
 
-gitcreds_get()
+gitcreds_set() # Para ingresar el token
 
+gitcreds_get() # Sirve para verificar que se ingresó el token
+´´´
 
 Una vez agregado el token se puede verificar directamente en el repositorio de *Github* que se realizó la carga de tu archivo, intentalo.
 
