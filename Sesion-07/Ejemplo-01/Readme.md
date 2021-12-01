@@ -17,7 +17,7 @@ Dentro de esta sesión podrás realizar una interacción entre RStudio y Github,
 
 [![](rstudiogit.png)](https://www.loom.com/share/11de365fbfb14f8887939691df0d8300)
 
-- Ahora vamos agregar un token de Github a RStudio CLoud para vincularlos, siguiendo las siguientes instrucciones: 
+- Ahora vamos agregar un token de Github a RStudio Cloud para vincularlos, siguiendo las siguientes instrucciones: 
 
 [![](token.png)](https://www.loom.com/share/4e05a8daf0b54bfca842eb22fbe6f781)
 
